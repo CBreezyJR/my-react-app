@@ -48,7 +48,7 @@
   z-index: 1;
 }
 
-/* TEXT */
+/* ============ HERO TEXT UPDATED ============ */
 .hero-content {
   position: absolute;
   top: 50%;
@@ -58,6 +58,47 @@
   text-align: center;
   z-index: 3;
 }
+
+/* MAIN TITLE — Bold Red, Size 20px */
+.hero-content h1 {
+  color: #ece6e6;
+  font-size: 25px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  margin-bottom: 12px;
+}
+
+/* SUBTITLE — White, Smaller */
+.hero-content h2 {
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 400;
+  margin-bottom: 30px;
+}
+
+/* CTA BUTTON — underline on hover */
+.hero-content a {
+  display: inline-block;
+  padding: 10px 25px;
+  border: 2px solid white;
+  border-radius: 5px;
+  text-decoration: none;
+  color: white;
+  font-size: 15px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.hero-content a:hover {
+  text-decoration: underline;
+  border-color: #d32f2f;
+}
+
+.hero-content p {
+  color: white;
+  font-size: 20px;
+}
+
 
 /* ARROWS */
 .arrow {
@@ -276,7 +317,8 @@
   .projects-gallery {
     grid-template-columns: 1fr;
   }
+
   .hero-content h1 {
-    font-size: 2rem;
+    font-size: 18px;
   }
 }

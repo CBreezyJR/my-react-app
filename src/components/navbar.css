@@ -1,3 +1,6 @@
+/* ============================
+      NAVBAR BASE STYLING
+=============================== */
 .navbar {
   position: fixed;
   top: 0;
@@ -5,105 +8,128 @@
   width: 100%;
   padding: 1rem 2rem;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   z-index: 1000;
-  background: transparent !important; /* remove any white */
-  border: none !important;
-  box-shadow: none !important;
+
+  background: transparent;
+  border: none;
+  box-shadow: none;
+
   font-family: "Raleway", sans-serif;
-  transition: opacity 0.15s linear, transform 0.15s linear;
+  transition: opacity 0.2s ease, transform 0.2s ease;
 }
 
+/* Hide on scroll */
 .navbar.hidden {
   opacity: 0;
   transform: translateY(-100%);
   pointer-events: none;
 }
 
+/* Container */
 .nav-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   width: 100%;
-  background: transparent; /* remove background */
+  max-width: 1400px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: transparent;
 }
 
+/* Logo */
 .nav-logo .logo-img {
-  height: 35px;
+  height: 40px;
   width: auto;
   object-fit: contain;
-  z-index: 2000;
-  transition: opacity 0.15s linear, transform 0.15s linear;
+  transition: opacity 0.2s ease;
 }
 
-/* nav links hanging */
+/* ============================
+         DESKTOP LINKS
+=============================== */
 .nav-links {
   display: flex;
   list-style: none;
   gap: 2rem;
-  background: transparent; /* ensure links container transparent */
+  align-items: center;
+  background: transparent;
 }
 
 .nav-links li a {
-  color: #efb5c0;
+  color: #002855;              /* Dark blue Raleway */
   text-decoration: none;
-  font-weight: 500;
+  font-weight: 600;
   font-size: 1rem;
-  transition: all 0.3s ease;
+  letter-spacing: 0.5px;
+  transition: color 0.25s ease, font-weight 0.25s ease;
 }
 
 .nav-links li a:hover,
 .nav-links li a.active {
-  color: #e63946;
+  color: #d32f2f;              /* Soft red */
   font-weight: 700;
 }
 
-/* MOBILE */
+/* ============================
+        MOBILE BUTTON
+=============================== */
 .menu-toggle {
   display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 2000;
 }
 
+.bar {
+  height: 3px;
+  width: 26px;
+  background: #002855;          /* Nav blue */
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+/* Hamburger animation */
+.menu-toggle.active .bar:nth-child(1) {
+  transform: rotate(45deg) translateY(8px);
+}
+.menu-toggle.active .bar:nth-child(2) {
+  opacity: 0;
+}
+.menu-toggle.active .bar:nth-child(3) {
+  transform: rotate(-45deg) translateY(-8px);
+}
+
+/* ============================
+        MOBILE MENU
+=============================== */
 @media (max-width: 768px) {
   .menu-toggle {
     display: flex;
-    flex-direction: column;
-    gap: 5px;
-    background: none;
-    border: none;
-    cursor: pointer;
-    z-index: 2000;
-  }
-
-  .bar {
-    width: 24px;
-    height: 2px;
-    background-color: #fff;
-    transition: all 0.3s ease;
-  }
-
-  .menu-toggle.active .bar:nth-child(1) {
-    transform: rotate(45deg) translateY(8px);
-  }
-  .menu-toggle.active .bar:nth-child(2) {
-    opacity: 0;
-  }
-  .menu-toggle.active .bar:nth-child(3) {
-    transform: rotate(-45deg) translateY(-8px);
   }
 
   .nav-links {
     position: absolute;
-    top: 65px;
+    top: 70px;
     right: 0;
-    flex-direction: column;
-    align-items: center;
+
     width: 100%;
-    padding: 1.5rem 0;
-    gap: 1.5rem;
-    transform: translateY(-200%);
-    transition: transform 0.4s ease;
-    background: rgba(252, 249, 249, 0.973); /* only on mobile */
+    padding: 2rem 0;
+
+    flex-direction: column;
+    gap: 1.8rem;
+
+    background: #ffffff;        /* White dropdown */
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+
+    transform: translateY(-250%);
+    transition: transform 0.45s cubic-bezier(.17,.67,.83,.67); /* ultra smooth */
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.15);
   }
 
   .nav-links.open {
@@ -111,6 +137,16 @@
   }
 
   .nav-links li a {
-    font-size: 1.2rem;
+    font-size: 1.25rem;
+    color: #002855;
+  }
+
+  .nav-links li a:hover {
+    color: #d32f2f;
+  }
+
+  /* Adjust logo color contrast */
+  .logo-img {
+    filter: drop-shadow(0 0 2px rgba(255,255,255,0.7));
   }
 }

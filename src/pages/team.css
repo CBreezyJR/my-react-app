@@ -1,70 +1,87 @@
+/* ===== TEAM PAGE WRAPPER ===== */
 .team-container {
-  background-color: #f9f9f9;
+  background: #f9f9f9;
   padding: 80px 5%;
-  text-align: center;
   font-family: "Raleway", sans-serif;
+  text-align: center;
 }
 
 .team-title {
-  color: #d32f2f; /* Red Raleway title */
+  color: #d32f2f;
   font-size: 2.8rem;
-  margin-bottom: 60px;
+  margin-bottom: 70px;
   text-transform: uppercase;
   letter-spacing: 2px;
 }
 
-.top-leaders {
+/* ===== TOP CIRCULAR LEADERS ===== */
+.hierarchy-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* --- circular leader cards --- */
+.leader-node {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.leader-circle {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 5px solid #d32f2f;
   display: flex;
   justify-content: center;
-  gap: 50px;
-  flex-wrap: wrap;
-  margin-bottom: 60px;
+  align-items: center;
+  background: #fff;
 }
 
-.leader-card {
-  background: white;
-  padding: 30px;
-  border-radius: 15px;
-  width: 500px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-  text-align: left;
-  transition: transform 0.3s ease;
-}
-
-.leader-card:hover {
-  transform: translateY(-5px);
-}
-
-.leader-card img {
+.leader-circle img {
   width: 100%;
-  height: 400px;
+  height: 100%;
   object-fit: cover;
-  border-radius: 10px;
-  margin-bottom: 20px;
 }
 
-.leader-card h2 {
+.leader-node h2 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-top: 12px;
   color: #d32f2f;
-  font-weight: bold;
-  font-size: 1.5rem;
 }
 
-.leader-card h3 {
+.leader-node h3 {
+  font-size: 1rem;
   color: #002855;
-  font-size: 1.1rem;
-  margin-bottom: 15px;
 }
 
-.leader-card p {
-  color: #001f3f;
-  line-height: 1.6;
-  font-size: 0.95rem;
+/* ===== LINES FOR HIERARCHY ===== */
+
+.vertical-line {
+  width: 3px;
+  height: 60px;
+  background: #002855;
+  margin: 0 auto 40px auto;
 }
 
+.horizontal-line {
+  width: 80%;
+  height: 3px;
+  background: #002855;
+  margin: 0 auto 50px auto;
+}
+
+/* ===== LOWER TEAM GRID ===== */
 .team-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
   gap: 25px;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
 .team-member {
@@ -76,14 +93,13 @@
 }
 
 .team-member:hover {
-  transform: translateY(-5px);
+  transform: translateY(-6px);
 }
 
 .team-member h4 {
   color: #d32f2f;
-  font-size: 1.1rem;
-  margin-bottom: 5px;
   font-weight: bold;
+  margin-bottom: 5px;
 }
 
 .team-member p {

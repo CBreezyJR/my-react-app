@@ -10,14 +10,12 @@ const team = [
     name: "Mr. Mohamed H. Nassor",
     title: "Founder & Executive Chairman",
     image: mohamed,
-    description: `With over 35 years of distinguished experience in mining, Mr. Mohamed Nassor is the driving force behind our strategic vision. His extensive career has been marked by the successful establishment of comprehensive mining portfolios and the management of over 1600 active personnel employees. As a director and shareholder of ONE NAGG GROUP, Mohamed infuses our operations with unparalleled expertise, overseeing production, management, and administration with a keen focus on efficiency and growth.`,
   },
   {
     id: 2,
     name: "Mr. Nabeel Nassor",
     title: "Doctor of Operations",
     image: nabeel,
-    description: `Nabeel Nassor brings over 5 years of proven experience in directing large-scale construction projects. His track record includes managing multi-million-dollar budgets, negotiating high-stakes contracts, and driving operational efficiency. Nabeel’s leadership ensures that our projects are executed with precision and excellence, enhancing productivity and delivering exceptional results. At ONE NAGG GROUP, we believe in the transformative power of inspired leadership. Our management team, with its rich blend of experience and passion, exemplifies the greatness that emerges when exceptional talent comes together. We are dedicated to pushing boundaries and achieving new heights, driven by the collective strength of our leaders.`,
   },
   {
     id: 3,
@@ -122,24 +120,40 @@ const team = [
 ];
 
 const Team = () => {
-  const topTeam = team.slice(0, 2);
+  const chairman = team[0];
+  const doctor = team[1];
   const rest = team.slice(2);
 
   return (
     <div className="team-container">
-      <h1 className="team-title">Our Leadership Team</h1>
+      <h1 className="team-title">Meet Our Team</h1>
 
-      <div className="top-leaders">
-        {topTeam.map((member) => (
-          <div key={member.id} className="leader-card">
-            <img src={member.image} alt={member.name} />
-            <h2>{member.name}</h2>
-            <h3>{member.title}</h3>
-            <p>{member.description}</p>
+      <div className="hierarchy-center">
+        {/* Chairman */}
+        <div className="leader-node">
+          <div className="leader-circle">
+            <img src={chairman.image} alt={chairman.name} />
           </div>
-        ))}
+          <h2>{chairman.name}</h2>
+          <h3>{chairman.title}</h3>
+        </div>
+
+        <div className="vertical-line"></div>
+
+        {/* Doctor */}
+        <div className="leader-node">
+          <div className="leader-circle">
+            <img src={doctor.image} alt={doctor.name} />
+          </div>
+          <h2>{doctor.name}</h2>
+          <h3>{doctor.title}</h3>
+        </div>
+
+        <div className="vertical-line"></div>
+        <div className="horizontal-line"></div>
       </div>
 
+      {/* Lower team */}
       <div className="team-grid">
         {rest.map((member) => (
           <div key={member.id} className="team-member">
