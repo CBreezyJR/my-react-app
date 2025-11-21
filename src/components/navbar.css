@@ -1,0 +1,116 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+  background: transparent !important; /* remove any white */
+  border: none !important;
+  box-shadow: none !important;
+  font-family: "Raleway", sans-serif;
+  transition: opacity 0.15s linear, transform 0.15s linear;
+}
+
+.navbar.hidden {
+  opacity: 0;
+  transform: translateY(-100%);
+  pointer-events: none;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  background: transparent; /* remove background */
+}
+
+.nav-logo .logo-img {
+  height: 35px;
+  width: auto;
+  object-fit: contain;
+  z-index: 2000;
+  transition: opacity 0.15s linear, transform 0.15s linear;
+}
+
+/* nav links hanging */
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+  background: transparent; /* ensure links container transparent */
+}
+
+.nav-links li a {
+  color: #efb5c0;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.nav-links li a:hover,
+.nav-links li a.active {
+  color: #e63946;
+  font-weight: 700;
+}
+
+/* MOBILE */
+.menu-toggle {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 2000;
+  }
+
+  .bar {
+    width: 24px;
+    height: 2px;
+    background-color: #fff;
+    transition: all 0.3s ease;
+  }
+
+  .menu-toggle.active .bar:nth-child(1) {
+    transform: rotate(45deg) translateY(8px);
+  }
+  .menu-toggle.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  .menu-toggle.active .bar:nth-child(3) {
+    transform: rotate(-45deg) translateY(-8px);
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 65px;
+    right: 0;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 1.5rem 0;
+    gap: 1.5rem;
+    transform: translateY(-200%);
+    transition: transform 0.4s ease;
+    background: rgba(252, 249, 249, 0.973); /* only on mobile */
+  }
+
+  .nav-links.open {
+    transform: translateY(0);
+  }
+
+  .nav-links li a {
+    font-size: 1.2rem;
+  }
+}

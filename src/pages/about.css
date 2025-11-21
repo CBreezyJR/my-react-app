@@ -1,0 +1,123 @@
+.about-container {
+  background-color: #f9f9f9;
+  padding: 80px 5%;
+  font-family: "Raleway", sans-serif;
+  color: #002855; /* dark blue text */
+}
+
+.about-title {
+  color: #d32f2f; /* red */
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 60px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.about-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 70px;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.about-section.reverse {
+  flex-direction: row-reverse;
+}
+
+.about-text {
+  flex: 1;
+  min-width: 320px;
+}
+
+.about-text h2 {
+  color: #d32f2f;
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #d32f2f;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+.about-text p {
+  color: #002855;
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+.about-image {
+  flex: 1;
+  width: 100%;
+  max-width: 500px;
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+  opacity: 0;
+  animation: fadeIn 1s ease forwards;
+}
+
+.about-image:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
+}
+
+.core-values {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 40px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.05);
+}
+
+.core-values h2 {
+  color: #d32f2f;
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  text-align: center;
+  border-bottom: 2px solid #d32f2f;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+.core-values ul {
+  list-style-type: disc;
+  margin-left: 25px;
+  color: #002855;
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+.core-values li {
+  margin-bottom: 10px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .about-section {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-text h2 {
+    font-size: 1.5rem;
+  }
+
+  .about-image {
+    max-width: 100%;
+  }
+
+  .core-values {
+    padding: 25px;
+  }
+}

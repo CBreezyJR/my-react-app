@@ -1,0 +1,46 @@
+.factory-page {
+    min-height: 100vh;
+    padding: 50px 20px;
+    background-color: #f9f8f6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .factory-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #0d1b3d;
+    margin-bottom: 20px;
+  }
+  
+  .factory-image-container {
+    max-width: 800px;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  .factory-image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .factory-details p {
+    color: #333;
+    font-size: 1rem;
+    margin: 5px 0;
+  }
+  
+  .factory-message p {
+    margin-top: 15px;
+    color: #333;
+  }
+  
+  .factory-message .italic {
+    font-style: italic;
+    color: #666;
+  }
+  

@@ -1,0 +1,50 @@
+.project-page {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 60px 10%;
+    background: #f9fafb;
+    color: #10243d;
+    font-family: "Raleway", sans-serif;
+    gap: 50px;
+  }
+  
+  .project-text {
+    flex: 1;
+    max-width: 45%;
+  }
+  
+  .project-text h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #15355a;
+    margin-bottom: 20px;
+    border-left: 4px solid #006699;
+    padding-left: 10px;
+  }
+  
+  .project-text p {
+    line-height: 1.6;
+    margin-bottom: 15px;
+  }
+  
+  .project-images {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
+  
+  .project-images img {
+    width: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
+  }
+  
+  .project-images img:hover {
+    transform: scale(1.03);
+  }
+  

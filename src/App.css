@@ -1,190 +1,123 @@
-/* App.css */
+/* ✅ Universal Reset & Responsive Base */
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
 
-/* Google Fonts */
-@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;500;600;700&display=swap");
-
-/* Root Variables for Light and Dark Mode */
-:root {
-  --bg-light: #FAFAF5;
-  --text-light: #1F1F1E;
-  --accent-light: #C5A572;
-  --highlight-light: #D1B464;
-
-  --bg-dark: #1F1F1E;
-  --text-dark: #FAFAF5;
-  --accent-dark: #D1B464;
-  --highlight-dark: #C5A572;
-
-  --font-heading: "Bebas Neue", sans-serif;
-  --font-body: "Montserrat", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-}
-
-/* Apply Dark Mode Class */
-body.dark {
-  background-color: var(--bg-dark);
-  color: var(--text-dark);
-}
-
-body.light {
-  background-color: var(--bg-light);
-  color: var(--text-light);
-}
-
-/* Global Styles */
-body {
-  font-family: var(--font-body);
-  min-height: 100vh;
+* {
   margin: 0;
   padding: 0;
-  scroll-behavior: smooth;
+  box-sizing: border-box;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-heading);
-  text-transform: uppercase;
-}
-
-/* Buttons */
-.btn-primary {
-  background: linear-gradient(135deg, var(--accent-light) 0%, var(--highlight-light) 100%);
-  color: var(--text-light);
-  border: none;
-  padding: 0.75rem 2rem;
-  border-radius: 9999px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: transform 150ms ease, box-shadow 200ms ease;
-}
-
-body.dark .btn-primary {
-  background: linear-gradient(135deg, var(--accent-dark) 0%, var(--highlight-dark) 100%);
-  color: var(--text-dark);
-}
-
-.btn-primary:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 15px 35px rgba(197, 165, 114, 0.33);
-}
-
-/* Hero Section */
-.header {
-  position: relative;
-  width: 100%;
-  height: 80vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-}
-
-.hero-image {
+html, body {
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 1;
-  opacity: 0.7;
+  font-family: 'Raleway', sans-serif;
+  color: #0d1b3d;
+  background-color: #f9f8f6; /* soft off-white base */
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+
+  /* ✅ Handle iPhone 15/17 Pro Max notches and safe areas */
+  padding-top: env(safe-area-inset-top, 0);
+  padding-left: env(safe-area-inset-left, 0);
+  padding-right: env(safe-area-inset-right, 0);
 }
 
-.overlay {
-  position: absolute;
-  inset: 0;
-  background: rgba(0,0,0,0.35);
-  z-index: 2;
+/* ✅ Global Typography Scaling */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  color: #0d1b3d;
+  line-height: 1.2;
 }
 
-.header-content {
-  position: relative;
-  z-index: 3;
-  text-align: center;
-  max-width: 900px;
-  padding: 0 1rem;
-}
-
-.header-content .heading {
-  font-size: 3rem;
-  margin-bottom: 1rem;
-}
-
-.header-content .subtitle {
-  font-size: 1.2rem;
-  margin-bottom: 2rem;
+p {
   line-height: 1.6;
+  color: #333;
+  font-size: clamp(0.95rem, 1.1vw, 1rem);
 }
 
-/* Services Section */
-.services {
-  max-width: 1200px;
-  margin: 4rem auto;
-  padding: 0 1rem;
+/* ✅ Links */
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.25s ease;
 }
 
-.services h2 {
-  font-size: 2.5rem;
-  text-align: center;
-  margin-bottom: 2rem;
+a:hover {
+  color: #e60000;
 }
 
-.service-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
-}
-
-.service-card {
-  background-color: rgba(255,255,255,0.9);
-  border-radius: 1.5rem;
-  overflow: hidden;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-body.dark .service-card {
-  background-color: rgba(40,40,40,0.85);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.5);
-}
-
-.service-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 12px 25px rgba(0,0,0,0.2);
-}
-
-.service-image {
+/* ✅ Layout Containers */
+#root, .App {
   width: 100%;
-  height: 180px;
-  object-fit: cover;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
 }
 
-.service-content {
-  padding: 1rem;
+/* ✅ Utility Classes */
+.section {
+  width: 100%;
+  padding: 4rem 2rem;
+  margin: 0 auto;
+  max-width: 1400px;
 }
 
-.service-content h3 {
-  font-size: 1.5rem;
-  margin-bottom: 0.5rem;
+.text-center {
+  text-align: center;
 }
 
-.service-content p {
-  font-size: 0.95rem;
-  line-height: 1.5;
-}
-
-/* Dark Mode Toggle Example */
-.dark-toggle {
-  position: fixed;
-  top: 1rem;
-  right: 1rem;
-  background: var(--accent-light);
-  color: var(--text-light);
+/* ✅ Buttons */
+button, .btn {
+  background-color: #e60000;
+  color: #fff;
+  font-weight: 700;
   border: none;
-  padding: 0.5rem 1rem;
-  border-radius: 9999px;
+  border-radius: 6px;
+  padding: 0.6rem 1.2rem;
   cursor: pointer;
+  transition: background 0.3s ease;
 }
 
-body.dark .dark-toggle {
-  background: var(--accent-dark);
-  color: var(--text-dark);
+button:hover, .btn:hover {
+  background-color: #c40000;
+}
+
+/* ✅ Responsive Fixes */
+@media (max-width: 1024px) {
+  .section {
+    padding: 3rem 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 2.5rem 1rem;
+  }
+
+  h1 {
+    font-size: clamp(1.8rem, 5vw, 2.4rem);
+  }
+
+  h2 {
+    font-size: clamp(1.4rem, 4vw, 1.8rem);
+  }
+}
+
+/* ✅ Modern Scrollbar (optional aesthetic touch) */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f9f8f6;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(13, 27, 61, 0.3);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(13, 27, 61, 0.5);
 }

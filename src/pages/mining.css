@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;700&display=swap');
+
+.mining-page {
+  background-color: #faf9f6;
+  color: #0d1b3d;
+  font-family: "Raleway", sans-serif;
+  text-align: center;
+  padding: 4rem 2rem 5rem;
+}
+
+/* Header */
+.mining-header h1 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #e63946; /* red title */
+  margin-bottom: 1rem;
+}
+
+.mining-header p {
+  font-size: 1.1rem;
+  color: #0d1b3d;
+  max-width: 850px;
+  margin: 0 auto 3rem;
+  line-height: 1.7;
+}
+
+/* Main Images */
+.mining-images {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 4rem;
+}
+
+.mining-images img {
+  width: 30%;
+  border-radius: 12px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.mining-images img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(0, 51, 153, 0.6);
+}
+
+/* Featured Projects */
+.projects-involved h2 {
+  font-size: 2rem;
+  color: #e63946; /* red title */
+  margin-bottom: 2.5rem;
+}
+
+.project-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  justify-items: center;
+}
+
+.project-card {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 1.5rem;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  text-align: left;
+  width: 100%;
+  max-width: 380px;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.12);
+}
+
+.project-info h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #e63946; /* red titles */
+  margin-bottom: 0.5rem;
+}
+
+.project-info p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #0d1b3d;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .mining-images {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .mining-images img {
+    width: 90%;
+  }
+}

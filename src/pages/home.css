@@ -1,0 +1,282 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+
+.home-container {
+  font-family: 'Raleway', sans-serif;
+  color: #0d1b3d;
+  background-color: #faf9f6;
+}
+
+/* --- HERO SECTION --- */
+.hero-section {
+  position: relative;
+  width: 100%;
+  height: 90vh;
+  overflow: hidden;
+}
+
+/* Slider container */
+.hero-slider {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Each slide */
+.slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 0.8s ease-in-out;
+}
+
+.slide.active {
+  opacity: 1;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Overlay */
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.25);
+  z-index: 1;
+}
+
+/* TEXT */
+.hero-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  text-align: center;
+  z-index: 3;
+}
+
+/* ARROWS */
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 3;
+  background: rgba(0,0,0,0.35);
+  border: none;
+  font-size: 2.2rem;
+  color: white;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: background 0.3s ease;
+}
+
+.arrow:hover {
+  background: rgba(0,0,0,0.55);
+}
+
+.arrow-left {
+  left: 20px;
+}
+
+.arrow-right {
+  right: 20px;
+}
+
+
+/* --- OUR SERVICES SECTION --- */
+.services-section {
+  padding: 4rem 2rem;
+  text-align: center;
+  background: transparent;
+  color: #0d1b3d;
+}
+
+.services-section h2 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.services-intro {
+  font-size: 1rem;
+  margin-bottom: 2rem;
+  color: #333;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+}
+
+/* Grid layout: 3x2 */
+.services-grid {
+  display: grid !important;
+  grid-template-columns: repeat(3, 1fr) !important;
+  grid-template-rows: repeat(2, auto);
+  gap: 2rem;
+  justify-items: center;
+  align-items: start;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.service {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.3s ease;
+}
+
+.service:hover {
+  transform: translateY(-10px);
+}
+
+.service-icon {
+  font-size: 3rem;
+  color: red;
+  margin-bottom: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.service:hover .service-icon {
+  transform: scale(1.2);
+}
+
+.service h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.service p {
+  font-size: 0.95rem;
+  line-height: 1.4;
+  max-width: 220px;
+  text-align: center;
+}
+
+/* --- PROJECTS SECTION --- */
+.projects-wrapper {
+  padding: 3rem 2rem;
+}
+
+.projects-heading {
+  text-align: center;
+  color: red;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+/* 4x2 Grid */
+.projects-gallery {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 360px;
+  gap: 1.5rem;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.project-frame {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 10px;
+  background: #eee;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.project-frame:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 22px rgba(0,0,0,0.12);
+}
+
+.project-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.35s ease;
+}
+
+.project-frame:hover .project-img {
+  transform: scale(1.05);
+}
+
+.hover-info {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: rgba(13,27,61,0.88);
+  color: #fff;
+  padding: 1rem;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+.project-frame:hover .hover-info {
+  opacity: 1;
+}
+
+.hover-info h3 {
+  font-size: 1.05rem;
+  margin-bottom: 0.4rem;
+  color: #ffdddd;
+}
+
+.hover-info p {
+  font-size: 0.9rem;
+  margin: 0.1rem 0;
+}
+
+.learn-btn {
+  margin-top: 0.6rem;
+  background: red;
+  border: none;
+  color: #fff;
+  padding: 0.5rem 0.9rem;
+  border-radius: 6px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 1200px) {
+  .projects-gallery {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 1024px) {
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .projects-gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+  .projects-gallery {
+    grid-template-columns: 1fr;
+  }
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+}

@@ -1,0 +1,128 @@
+/* ===========================
+   RENTAL PAGE BASE
+   =========================== */
+
+   .rental-page {
+    width: 100%;
+    min-height: 100vh;
+    padding: 40px 20px;
+    background: #f7f7f7;
+  }
+  
+  /* Header */
+  .rental-header {
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto 40px auto;
+  }
+  
+  .rental-header h1 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .rental-header p {
+    font-size: 18px;
+    color: #444;
+    line-height: 1.6;
+  }
+  
+  /* ===========================
+     IMAGES SECTION
+     =========================== */
+  
+  .rental-images {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+  }
+  
+  .rental-image-card img {
+    width: 340px;
+    border-radius: 12px;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.12);
+  }
+  
+  /* ===========================
+     TABLE (CENTERED + ROUNDED)
+     =========================== */
+  
+  .rental-table-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;   /* Center horizontally */
+    margin-top: 40px;
+  }
+  
+  .rental-table {
+    width: 85%;
+    max-width: 1100px;
+    border-collapse: separate;   /* IMPORTANT for rounded corners */
+    border-spacing: 0;           /* No gaps */
+    background: #fff;
+  
+    /* Rounded corners */
+    border-radius: 12px;
+    overflow: hidden;
+  
+    /* Add outer border */
+    border: 1px solid #ccc;
+  }
+  
+  /* Table Cells */
+  .rental-table th,
+  .rental-table td {
+    border: 1px solid #ccc;     /* Thin visible borders */
+    padding: 12px 14px;
+    font-size: 15px;
+    color: #222;
+  }
+  
+  /* Header Style */
+  .rental-table th {
+    background: #eaeaea;
+    font-weight: bold;
+    text-align: left;
+  }
+  
+  /* Remove double borders on edges */
+  .rental-table th:first-child,
+  .rental-table td:first-child {
+    border-left: none;
+  }
+  
+  .rental-table th:last-child,
+  .rental-table td:last-child {
+    border-right: none;
+  }
+  
+  /* Remove top/bottom duplicates */
+  .rental-table tr:first-child th {
+    border-top: none;
+  }
+  
+  .rental-table tr:last-child td {
+    border-bottom: none;
+  }
+  
+  /* Hover effect */
+  .rental-table tr:hover {
+    background: #f5f5f5;
+  }
+  
+  /* ===========================
+     PARAGRAPH UNDER TABLE
+     =========================== */
+  
+  .rental-extra-info {
+    max-width: 900px;
+    margin: 30px auto;
+    font-size: 17px;
+    text-align: center;
+    color: #444;
+    line-height: 1.7;
+  }
+  

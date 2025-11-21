@@ -1,71 +1,103 @@
-import React, { useState } from "react";
-import "./App.css";
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-// Import images from src/assets
-import heroMedia from "./assets/0.hero.jpg";
-import constructionImg from "./assets/1.construction.jpg";
-import miningImg from "./assets/2.Mining.jpg";
-import logisticsImg from "./assets/3.Logistics.jpg";
-import oilImg from "./assets/4.oil.jpg";
-import realEstateImg from "./assets/5.realestate.jpg";
-import rentalImg from "./assets/6.rental.jpg";
+// Pages
+import Home from "./pages/home";
+import WhatWeDo from "./pages/whatwedo";
+import OurServices from "./pages/ourservices";
+import OurProjects from "./pages/projects";
+import AboutUs from "./pages/about";
+import OurTeam from "./pages/team";
+import ContactUs from "./pages/contact";
 
-const services = [
-  { name: "Construction", image: constructionImg, description: "Design-build delivery across commercial, industrial, and infrastructure projects rooted in precision and safety." },
-  { name: "Mining", image: miningImg, description: "Exploration to beneficiation for coal, gold, nickel, and graphite—with rigorous compliance and environmental stewardship." },
-  { name: "Logistics", image: logisticsImg, description: "Heavy haulage, rig moving, and customs brokerage engineered to move critical cargo on schedule." },
-  { name: "Oil & Gas", image: oilImg, description: "Pipeline infrastructure execution and field services for East Africa's largest energy projects." },
-  { name: "Real Estate", image: realEstateImg, description: "Acquisitions, negotiations, and project supervision that elevate property value across Tanzania." },
-  { name: "Equipment Rental", image: rentalImg, description: "High-availability fleet of heavy machinery, from cranes and graders to drill rigs and haul trucks." },
-];
+import Construction from "./pages/construction";
+import Mining from "./pages/mining";
+import Logistics from "./pages/logistics";
+import Oil from "./pages/oil";
+import RealEstate from "./pages/realestate";
+import Rental from "./pages/rental";
+
+// Featured Projects Pages
+import Posta from "./pages/posta";
+import Sasenga from "./pages/sasenga";
+import Tobacco from "./pages/tobacco";
+import Tunduru from "./pages/tunduru";
+import Ps3 from "./pages/ps3";
+import Sgr from "./pages/sgr";
+import Marine from "./pages/marine";
+import Pipeline from "./pages/pipeline";
+import Nditi from "./pages/nditi";
+import Coal from "./pages/coal";
+import Sassya from "./pages/sassya";
+import Dodoma from "./pages/dodoma";
+import Nagg from "./pages/nagg";
+import FuelTransport from "./pages/fueltransport";
+import YapiTransport from "./pages/yapi";
+import Cargo from "./pages/cargo";
+import IronOre from "./pages/ironore";
+import Aggregate from "./pages/aggregate";
+import Machinery from "./pages/machinery";
+import Factory from "./pages/factory";
+import CoalTransport from "./pages/coaltransport";
+import Bahi from "./pages/bahi";
+
+
+// Components
+import Navbar from "./components/navbar";
+
 
 function App() {
-  const [darkMode, setDarkMode] = useState(false);
-
-  const toggleDarkMode = () => {
-    setDarkMode(!darkMode);
-    document.body.classList.toggle("dark", !darkMode);
-    document.body.classList.toggle("light", darkMode);
-  };
-
   return (
-    <div className="app">
-      {/* Dark Mode Toggle */}
-      <button className="dark-toggle" onClick={toggleDarkMode}>
-        {darkMode ? "Light Mode" : "Dark Mode"}
-      </button>
+    <Router>
+      <div className="app min-h-screen flex flex-col bg-gray-50 text-gray-900 font-raleway">
+        {/* Navbar always visible */}
+        <Navbar />
 
-      {/* Hero Section */}
-      <header className="header">
-        <img src={heroMedia} alt="Hero" className="hero-image" />
-        <div className="overlay"></div>
-        <div className="header-content">
-          <h1 className="heading">Committed to quality, safety & innovation</h1>
-          <p className="subtitle">
-            NAGG Group Company Limited delivers integrated solutions across construction, mining, logistics, oil & gas, real estate, and equipment rental.
-          </p>
-          <button className="btn-primary">Explore our work</button>
-        </div>
-      </header>
+        {/* Routes */}
+        <main className="flex-1 w-full">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/what-we-do" element={<WhatWeDo />} />
+            <Route path="/our-services" element={<OurServices />} />
+            <Route path="/our-projects" element={<OurProjects />} />
+            <Route path="/about-us" element={<AboutUs />} />
+            <Route path="/our-team" element={<OurTeam />} />
+            <Route path="/contact-us" element={<ContactUs />} />
 
-      {/* Services Section */}
-      <main className="main">
-        <section className="services">
-          <h2 className="section-title">Our Services</h2>
-          <div className="service-grid">
-            {services.map((service) => (
-              <div key={service.name} className="service-card">
-                <img src={service.image} alt={service.name} className="service-image" />
-                <div className="service-content">
-                  <h3>{service.name}</h3>
-                  <p>{service.description}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </section>
-      </main>
-    </div>
+            <Route path="/construction" element={<Construction />} />
+            <Route path="/mining" element={<Mining />} />
+            <Route path="/oil" element={<Oil />} />
+            <Route path="/logistics" element={<Logistics />} />
+            <Route path="/realestate" element={<RealEstate />} />
+            <Route path="/rental" element={<Rental />} />
+
+            {/* Featured Project Pages */}
+            <Route path="/posta" element={<Posta />} />
+            <Route path="/sasenga" element={<Sasenga />} />
+            <Route path="/tobacco" element={<Tobacco />} />
+            <Route path="/tunduru" element={<Tunduru />} />
+            <Route path="/ps3" element={<Ps3 />} />
+            <Route path="/sgr" element={<Sgr />} />
+            <Route path="/marine" element={<Marine />} />
+            <Route path="/pipeline" element={<Pipeline />} />
+            <Route path="/nditi" element={<Nditi />} />
+            <Route path="/coal" element={<Coal />} />
+            <Route path="/sassya" element={<Sassya />} />
+            <Route path="/dodoma" element={<Dodoma />} />
+            <Route path="/nagg" element={<Nagg />} />
+            <Route path="/fueltransport" element={<FuelTransport />} />
+            <Route path="/yapi" element={<YapiTransport />} />
+            <Route path="/cargo" element={<Cargo />} />
+            <Route path="/ironore" element={<IronOre />} />
+            <Route path="/aggregate" element={<Aggregate />} />
+            <Route path="/machinery" element={<Machinery />} />
+            <Route path="/factory" element={<Factory />} />
+            <Route path="/coaltransport" element={<CoalTransport />} />
+            <Route path="/bahi" element={<Bahi />} />
+          </Routes>
+        </main>
+      </div>
+    </Router>
   );
 }
 

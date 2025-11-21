@@ -1,0 +1,46 @@
+.ironore-page {
+    min-height: 100vh;
+    padding: 50px 20px;
+    background-color: #f9f8f6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .ironore-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #0d1b3d;
+    margin-bottom: 20px;
+  }
+  
+  .ironore-image-container {
+    max-width: 800px;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  .ironore-image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .ironore-details p {
+    color: #333;
+    font-size: 1rem;
+    margin: 5px 0;
+  }
+  
+  .ironore-message p {
+    margin-top: 15px;
+    color: #333;
+  }
+  
+  .ironore-message .italic {
+    font-style: italic;
+    color: #666;
+  }
+  

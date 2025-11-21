@@ -1,0 +1,278 @@
+/* Import Raleway font */
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+
+/* ===== Global Styles ===== */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Raleway', sans-serif;
+  background-color: #faf9f6; /* off-white */
+  color: #0b1e39; /* dark blue */
+  scroll-behavior: smooth;
+}
+
+h1, h2, h3, h4, h5 {
+  color: #e63946; /* red titles */
+  margin-bottom: 0.5rem;
+}
+
+p, li {
+  color: #0b1e39;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: #0b1e39;
+}
+
+/* ===== Navigation Bar ===== */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 1.5rem;
+  background-color: #faf9f6;
+  border-bottom: 1px solid #e0e0e0;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar-logo {
+  height: 50px;
+}
+
+.navbar-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-links li a {
+  font-weight: 700;
+  position: relative;
+  padding-bottom: 4px;
+}
+
+.navbar-links li a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background-color: red;
+  left: 0;
+  bottom: 0;
+  transition: width 0.3s ease;
+}
+
+.navbar-links li a:hover::after,
+.navbar-links li a.active::after {
+  width: 100%;
+}
+
+/* ===== Hero Section ===== */
+.hero-section {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 70vh;
+  overflow: hidden;
+}
+
+.hero-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  filter: brightness(0.7);
+}
+
+.hero-fade {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(to right, rgba(250, 249, 246, 0.95), transparent);
+  z-index: 1;
+}
+
+.hero-text {
+  position: relative;
+  z-index: 2;
+  padding: 2rem 4rem;
+  max-width: 50%;
+}
+
+.hero-text h1 {
+  font-size: 3rem;
+}
+
+.hero-text h2 {
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+.learn-more-btn {
+  display: inline-block;
+  margin-top: 1.5rem;
+  padding: 0.75rem 1.8rem;
+  background-color: #e63946;
+  color: #fff;
+  font-weight: 700;
+  border-radius: 6px;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.learn-more-btn:hover {
+  background-color: #c5303f;
+  transform: translateY(-2px);
+}
+
+/* ===== Sections: Services, Projects, Team, About, Contact ===== */
+.section {
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.section p {
+  font-size: 1.1rem;
+  max-width: 800px;
+  margin: 0 auto 2rem auto;
+}
+
+/* ===== Cards Grid ===== */
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.12);
+}
+
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.card img:hover {
+  transform: scale(1.05);
+}
+
+.card-body {
+  padding: 1rem 1.5rem;
+  text-align: left;
+}
+
+.card-body h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+}
+
+.card-body p {
+  font-size: 0.95rem;
+  margin-bottom: 0.3rem;
+}
+
+.card-body .status {
+  font-weight: 600;
+}
+
+.status.completed { color: #88d498; }
+.status.ongoing { color: #f5cd79; }
+.status.new-project, .status.new { color: #74b9ff; }
+.status.planned { color: #e17055; }
+
+/* ===== Team Section Hierarchy ===== */
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  justify-items: center;
+}
+
+.team-card img {
+  width: 100%;
+  border-radius: 50%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.team-card h3 {
+  margin: 0.5rem 0 0.2rem;
+}
+
+.team-card p {
+  font-size: 0.9rem;
+  font-style: italic;
+}
+
+/* ===== Contact Section ===== */
+.contact-info h2 {
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.contact-info p, .contact-info li {
+  margin-bottom: 0.5rem;
+}
+
+.contact-info ul {
+  padding-left: 1rem;
+  list-style-type: disc;
+}
+
+/* ===== Responsive Phone 375x609 ===== */
+@media (max-width: 400px) {
+  .hero-section {
+    flex-direction: column;
+    min-height: 50vh;
+  }
+
+  .hero-fade { display: none; }
+  .hero-text { max-width: 100%; text-align: center; padding: 1rem; }
+  .hero-text h1 { font-size: 2rem; }
+  .hero-text h2 { font-size: 1.2rem; }
+
+  .cards-grid { grid-template-columns: 1fr; gap: 1.5rem; }
+
+  .card img { height: 150px; }
+  .team-card img { height: 150px; }
+
+  .navbar {
+    padding: 0.5rem 1rem;
+  }
+
+  .navbar-links {
+    flex-direction: column;
+    gap: 0.8rem;
+    align-items: center;
+  }
+}
