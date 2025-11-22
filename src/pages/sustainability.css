@@ -1,0 +1,64 @@
+/* ---------- GLOBAL PAGE LAYOUT ---------- */
+.sustainability-page {
+    width: 100%;
+    min-height: 100vh;
+    background: #f8f8f8;
+    font-family: "Raleway", sans-serif;
+    padding: 100px 20px 60px 20px;
+    box-sizing: border-box;
+  }
+  
+  /* ---------- PAGE TITLE ---------- */
+  .sus-title {
+    font-size: 36px;
+    font-weight: 800;
+    text-align: center;
+    color: #d10000; /* red */
+    margin-bottom: 50px;
+  }
+  
+  /* ---------- CSR SECTIONS ---------- */
+  .sus-section {
+    background: white;
+    padding: 25px 30px;
+    border-radius: 14px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+    margin-bottom: 30px;
+  }
+  
+  .sus-section h3 {
+    font-size: 22px;
+    font-weight: 700;
+    color: #222;
+    margin-bottom: 12px;
+  }
+  
+  .sus-section p {
+    font-size: 16px;
+    line-height: 1.7;
+    color: #444;
+  }
+  
+  /* ---------- CSR NUMBERING ---------- */
+  .sus-number {
+    font-weight: 800;
+    color: #d10000;
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  
+  /* ---------- RESPONSIVE ---------- */
+  @media (max-width: 768px) {
+    .sus-title {
+      font-size: 28px;
+    }
+  
+    .sus-section h3 {
+      font-size: 18px;
+    }
+  
+    .sus-section p {
+      font-size: 15px;
+    }
+  }
+  

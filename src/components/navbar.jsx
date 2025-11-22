@@ -1,76 +1,71 @@
 import React, { useState, useEffect } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "./navbar.css";
-import logo from "../assets/7.logo.jpg";
+import Logo from "../assets/7.logo.jpg";
 
 function Navbar() {
-  const [menuOpen, setMenuOpen] = useState(false);
-  const [hidden, setHidden] = useState(false);
-  const location = useLocation();
+  const [open, setOpen] = useState(false);
+  const [language, setLanguage] = useState("EN");
+  const [showNav, setShowNav] = useState(true);
+
+  const toggleLanguage = () => {
+    setLanguage((prev) => (prev === "EN" ? "SW" : "EN"));
+  };
 
   useEffect(() => {
-    let lastScrollY = window.scrollY;
-  
     const handleScroll = () => {
-      const currentScroll = window.scrollY;
-  
-      if (currentScroll > lastScrollY) {
-        // scrolling down
-        setHidden(true);
+      if (window.scrollY === 0) {
+        // Only show when at the very top
+        setShowNav(true);
       } else {
-        // scrolling up
-        setHidden(false);
+        // Hide when scrolled down
+        setShowNav(false);
       }
-  
-      lastScrollY = currentScroll;
     };
-  
+
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-  
-  
-  
 
   return (
-    <nav className={`navbar ${hidden ? "hidden" : ""}`}>
-      <div className="nav-container">
-        <Link to="/" className="nav-logo">
-          <img src={logo} alt="NAGG Logo" className="logo-img" />
-        </Link>
+    <>
+      {/* Floating Logo */}
+      <img
+        src={Logo}
+        alt="NAGG GROUP Logo"
+        className={`nav-logo ${showNav ? "show" : "hide"}`}
+      />
 
-        <button
-          className={`menu-toggle ${menuOpen ? "active" : ""}`}
-          onClick={() => setMenuOpen(!menuOpen)}
-        >
-          <span className="bar"></span>
-          <span className="bar"></span>
-          <span className="bar"></span>
-        </button>
+      {/* Floating Hamburger */}
+      <button
+        className={`hamburger ${open ? "open" : ""} ${showNav ? "show" : "hide"}`}
+        onClick={() => setOpen(!open)}
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
 
-        <ul className={`nav-links ${menuOpen ? "open" : ""}`}>
-          {[
-            ["Home", "/"],
-            ["What We Do", "/what-we-do"],
-            ["Our Services", "/our-services"],
-            ["Our Projects", "/our-projects"],
-            ["About Us", "/about-us"],
-            ["Our Team", "/our-team"],
-            ["Contact", "/contact-us"],
-          ].map(([name, path]) => (
-            <li key={name}>
-              <Link
-                to={path}
-                className={location.pathname === path ? "active" : ""}
-                onClick={() => setMenuOpen(false)}
-              >
-                {name}
-              </Link>
-            </li>
-          ))}
-        </ul>
+      {/* Half-Page Overlay */}
+      <div className={`overlay ${open ? "show" : ""}`}>
+        <div className="overlay-content">
+          {/* NAVIGATION LINKS */}
+          <Link onClick={() => setOpen(false)} to="/">Home</Link>
+          <Link onClick={() => setOpen(false)} to="/what-we-do">What We Do</Link>
+          <Link onClick={() => setOpen(false)} to="/our-services">Our Services</Link>
+          <Link onClick={() => setOpen(false)} to="/our-projects">Our Projects</Link>
+          <Link onClick={() => setOpen(false)} to="/about-us">About Us</Link>
+          <Link onClick={() => setOpen(false)} to="/sustainability">Sustainability</Link>
+          <Link onClick={() => setOpen(false)} to="/our-team">Our Team</Link>
+          <Link onClick={() => setOpen(false)} to="/contact-us">Contact Us</Link>
+
+          {/* LANGUAGE TOGGLE INSIDE OVERLAY */}
+          <button className="lang-toggle" onClick={toggleLanguage}>
+            {language === "EN" ? "SW" : "EN"}
+          </button>
+        </div>
       </div>
-    </nav>
+    </>
   );
 }
 
