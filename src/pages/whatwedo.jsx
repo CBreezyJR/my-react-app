@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import constructionImg from "../assets/1.construction.png";
+import constructionImg from "../assets/marine9.jpg";
 import miningImg from "../assets/nditi9.jpg";
 import oilImg from "../assets/4.oil.png";
 import logisticsImg from "../assets/3.logistics.jpg";
