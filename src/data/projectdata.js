@@ -2,14 +2,9 @@
 
 import postaHouse from "../assets/posta10.jpg";
 import tunduruWater from "../assets/tunduru.png";
-import mcypAccessRoad from "../assets/mcpy6.png";
-import temporaryAccessRoad from "../assets/mcpy6.png";
 import yongomaDam from "../assets/yongoma.png";
 import sasengaIrrigation from "../assets/sasenga.png";
-import electricFenceSgr1 from "../assets/prooffencelot2.png";
 import sgrEarthworks from "../assets/sgrearthworks.png";
-import electricFenceTrc2 from "../assets/prooffencelot2.png";
-import mainSgrAlignment from "../assets/mainsgralignment.png";
 import marineTerminal from "../assets/marine.png";
 import tobaccoFactory from "../assets/tobacco10.jpg";
 import nickelOrePmm from "../assets/dom7.jpg";
