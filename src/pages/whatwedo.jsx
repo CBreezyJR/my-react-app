@@ -1,101 +1,106 @@
-import React, { useEffect, useRef } from "react";
-import "./whatwedo.css";
+import React from "react";
+import { Link } from "react-router-dom";
 
-import operations from "../assets/operation02.png";
-import safety from "../assets/safety.jpg";
-import quality from "../assets/marine.png";
-import efficiency from "../assets/efficiency.jpg";
-import innovation from "../assets/innovation.jpg";
-import customer from "../assets/customer.jpg";
-import environment from "../assets/environment.jpg";
-import employees from "../assets/employment02.png";
+import constructionImg from "../assets/1.construction.png";
+import miningImg from "../assets/nditi9.jpg";
+import oilImg from "../assets/4.oil.png";
+import logisticsImg from "../assets/3.logistics.jpg";
+import realEstateImg from "../assets/5.realestate.jpg";
+import rentalImg from "../assets/6.rental.jpg";
 
-const roles = [
+const services = [
   {
-    title: "Operational Excellence",
+    title: "Construction",
     description:
-      "We deliver projects with precision and efficiency — ensuring every milestone meets quality, budget, and timeline standards. Our structured processes and continuous improvement methods keep every operation running at peak performance.",
-    image: operations,
+      "We deliver durable infrastructure through innovation, safety, and precision engineering for modern needs.",
+    image: constructionImg,
+    link: "/construction",
   },
   {
-    title: "Health and Safety",
+    title: "Mining",
     description:
-      "We uphold a zero-harm policy by fully complying with Tanzania’s Occupational Safety Act No.05 of 2003. Safety is embedded in every step — from design to delivery — creating a culture where everyone looks out for one another.",
-    image: safety,
+      "Efficient and responsible mineral extraction powered by cutting-edge technology and environmental care.",
+    image: miningImg,
+    link: "/mining",
   },
   {
-    title: "Quality Management",
+    title: "Oil & Gas",
     description:
-      "Our quality systems ensure reliability and consistency. Every process is benchmarked against international standards to guarantee lasting results and total client satisfaction.",
-    image: quality,
+      "Reliable pipeline, plant, and civil construction solutions supporting energy operations across the region.",
+    image: oilImg,
+    link: "/oil",
   },
   {
-    title: "Efficiency & Cost Management",
+    title: "Logistics",
     description:
-      "We emphasize resource optimization — maximizing productivity while minimizing costs. Through smart planning and innovation, we achieve efficiency without compromise.",
-    image: efficiency,
+      "We move your resources seamlessly with dependable fleet management and optimized transport solutions.",
+    image: logisticsImg,
+    link: "/logistics",
   },
   {
-    title: "Innovation & Technology Integration",
+    title: "Real Estate",
     description:
-      "We integrate modern technologies and data-driven approaches to deliver cutting-edge solutions. This helps us maintain agility and competitiveness in every project.",
-    image: innovation,
+      "Designing and developing sustainable, functional spaces that inspire both productivity and comfort.",
+    image: realEstateImg,
+    link: "/realestate",
   },
   {
-    title: "Customer Satisfaction",
+    title: "Equipment Rental",
     description:
-      "Our clients are partners in progress. We deliver with transparency, responsiveness, and dedication — exceeding expectations at every phase of the project.",
-    image: customer,
-  },
-  {
-    title: "Environmental Sustainability",
-    description:
-      "We implement eco-friendly solutions that reduce impact and promote sustainability. From waste reduction to energy conservation, we’re committed to protecting the planet.",
-    image: environment,
-  },
-  {
-    title: "Employee Development",
-    description:
-      "We invest in our people through mentoring, continuous learning, and professional growth. Our team’s excellence drives the company’s long-term success.",
-    image: employees,
+      "Providing high-performance machines and tools to keep your projects running smoothly and efficiently.",
+    image: rentalImg,
+    link: "/rental",
   },
 ];
 
-export default function WhatWeDo() {
-  const titleRef = useRef(null);
-  const typed = useRef(false);
-
-  useEffect(() => {
-    if (typed.current) return;
-    typed.current = true;
-
-    const title = titleRef.current;
-    const text = "WHAT WE DO";
-    let i = 0;
-    title.textContent = "";
-
-    const type = () => {
-      if (i < text.length) {
-        title.textContent += text.charAt(i);
-        i++;
-        setTimeout(type, 100);
-      }
-    };
-    type();
-  }, []);
-
+export default function OurServices() {
   return (
-    <div className="whatwedo-page">
-      <h1 ref={titleRef} className="main-title"></h1>
-      <div className="roles-grid">
-        {roles.map((role, index) => (
-          <div className="role-card" key={index}>
-            <img src={role.image} alt={role.title} className="role-image" />
-            <h2 className="role-title">{role.title}</h2>
-            <p className="role-description">{role.description}</p>
+    <div className="pt-32 md:pt-40 px-6 font-['Raleway']">
+
+      {/* HERO SECTION */}
+      <section className="text-center flex flex-col items-center gap-20 pb-30">
+        <h1 className="text-3xl md:text-4xl font-bold text-gray-800">
+          Our Expertise, Your Success
+        </h1>
+
+        <p className="text-gray-600 max-w-2xl mx-auto text-base md:text-lg leading-relaxed">
+          NAGG Group provides comprehensive solutions across construction,
+          mining, oil & gas, logistics, real estate, and equipment rental —
+          driven by innovation, quality, and reliability.
+        </p>
+      </section>
+      {/* SERVICES GRID */}
+      <section className="max-w-7xl mx-auto px-6 py-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        {services.map((service, index) => (
+          <div
+            key={index}
+            className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300"
+          >
+            <img
+              src={service.image}
+              alt={service.title}
+              className="w-full h-48 object-cover"
+            />
+
+            <div className="p-6">
+              <h2 className="text-xl font-semibold text-gray-800 mb-2">
+                {service.title}
+              </h2>
+
+              <p className="text-gray-600 text-sm mb-4">
+                {service.description}
+              </p>
+
+              <Link
+                to={service.link}
+                className="inline-block mt-2 text-blue-600 font-medium hover:text-blue-800 transition"
+              >
+                Learn More →
+              </Link>
+            </div>
           </div>
         ))}
-      </div>
+      </section>
     </div>
   );
 }

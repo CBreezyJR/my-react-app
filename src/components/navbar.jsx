@@ -51,8 +51,8 @@ function Navbar() {
         <div className="overlay-content">
           {/* NAVIGATION LINKS */}
           <Link onClick={() => setOpen(false)} to="/">Home</Link>
+          <Link onClick={() => setOpen(false)} to="/principles">Our Principles</Link>
           <Link onClick={() => setOpen(false)} to="/what-we-do">What We Do</Link>
-          <Link onClick={() => setOpen(false)} to="/our-services">Our Services</Link>
           <Link onClick={() => setOpen(false)} to="/our-projects">Our Projects</Link>
           <Link onClick={() => setOpen(false)} to="/about-us">About Us</Link>
           <Link onClick={() => setOpen(false)} to="/sustainability">Sustainability</Link>

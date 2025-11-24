@@ -179,7 +179,7 @@ function Home() {
             {
               img: pumpStation,
               title: "Construction of Pump Station (PS-3)",
-              info: "Client: EACOP | Year: TBA",
+              info: "Client: EACOP | Year: 2025",
               link: "/ps3",
             },
           ].map((proj, idx) => (
