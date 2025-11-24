@@ -1,6 +1,6 @@
 // src/data/projectsData.js
 
-import postaHouse from "../assets/posta10.jpg";
+import posta10 from "../assets/posta10.jpg";
 import tunduruWater from "../assets/tunduru.png";
 import yongomaDam from "../assets/yongoma.png";
 import sasengaIrrigation from "../assets/sasenga.png";
@@ -39,7 +39,7 @@ const projectdata = [
     client: "Tanzania Posta Corporation",
     status: "Ongoing",
     year: "2025",
-    image: postaHouse,
+    image: posta10,
     link: "/posta",
   },
   {
