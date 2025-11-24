@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { FaHammer, FaTruck, FaOilCan, FaBuilding, FaCogs, FaIndustry } from "react-icons/fa";
 
-import postaHouse from "../assets/posta10.jpg";
+import posta10 from "../assets/posta10.jpg";
 import tunduruWater from "../assets/tunduru10.jpg";
 import sasengaIrrigation from "../assets/sasenga10.jpg";
 import tobaccoFactory from "../assets/tobacco10.jpg";
@@ -153,7 +153,7 @@ function Home() {
           {/* --- Existing 5 Projects (unchanged) --- */}
           {[
             {
-              img: postaHouse,
+              img: posta10,
               title: "Construction of Posta House",
               info: "Client: Tanzania Posta Corporation | Year: 2025-26",
               link: "/posta",
