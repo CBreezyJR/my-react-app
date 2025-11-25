@@ -2,9 +2,9 @@ import React from "react";
 import "./logistics.css";
 
 // Images
-import logisticsMain1 from "../assets/3.logistics.jpg";
+import logisticsMain1 from "../assets/cargotransportation.jpg";
 import logisticsMain2 from "../assets/logistics02.jpg";
-import logisticsMain3 from "../assets/logistics03.jpg";
+import logisticsMain3 from "../assets/naggtransportation.png";
 
 // Import projects data
 import projectsData from "../data/projectdata";

@@ -3,7 +3,7 @@ import "./mining.css";
 
 // Images
 import miningMain1 from "../assets/dom7.jpg";
-import miningMain2 from "../assets/sassya5.jpg";
+import miningMain2 from "../assets/nditi7.jpg";
 import miningMain3 from "../assets/nditi10.jpg";
 
 // Import projects data

@@ -3,44 +3,36 @@ import "./construction.css";
 import projectsData from "../data/projectdata";
 
 function Construction() {
-  const featured = projectsData.filter(p =>
-    ["Construction of Tobacco Factory", "Construction of Posta House Office Building", "Construction of Main SGR Alignment"].includes(p.title)
-  );
-
-  const waterProjects = projectsData.filter(p =>
-    ["Improvement of Water Supply System in Tunduru", "Construction of Yongoma Dam"].includes(p.title)
+  // Filter only construction category projects
+  const constructionProjects = projectsData.filter(
+    (p) => p.category === "Construction"
   );
 
   return (
     <div className="construction-page">
-      <header>
+      {/* HEADER */}
+      <header className="construction-header">
         <h1>Construction Projects</h1>
-        <p>Our key construction and water projects highlighting excellence and efficiency.</p>
+        <p>
+          A showcase of NAGG Group’s major construction projects across Tanzania,
+          delivering reliability, innovation, and engineering excellence.
+        </p>
       </header>
 
-      <section>
-        <h2>Featured Construction Projects</h2>
-        <div className="projects-grid">
-          {featured.map(p => (
-            <div className="project-card" key={p.id}>
-              <div className="project-image"><img src={p.image} alt={p.title} /></div>
-              <h3>{p.title}</h3>
-              <p><strong>Client:</strong> {p.client}</p>
-              <p><strong>Location:</strong> {p.location}</p>
-            </div>
-          ))}
-        </div>
-      </section>
+      {/* PROJECT CARDS */}
+      <section className="construction-section">
+        <h2>Our Construction Projects</h2>
 
-      <section>
-        <h2>Featured Water Projects</h2>
         <div className="projects-grid">
-          {waterProjects.map(p => (
-            <div className="project-card" key={p.id}>
-              <div className="project-image"><img src={p.image} alt={p.title} /></div>
-              <h3>{p.title}</h3>
-              <p><strong>Location:</strong> {p.location}</p>
-              <p><strong>Value:</strong> {p.value}</p>
+          {constructionProjects.map((project) => (
+            <div className="project-card" key={project.id}>
+              <h3>{project.title}</h3>
+              <p>
+                <strong>Location:</strong> {project.location}
+              </p>
+              <p>
+                <strong>Status:</strong> {project.status}
+              </p>
             </div>
           ))}
         </div>

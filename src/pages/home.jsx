@@ -79,7 +79,6 @@ function Home() {
 
         <div className="hero-content">
           <h1>Welcome to NAGG Group</h1>
-          <p>Perfection is the Goal.</p>
           <Link to="/our-services">
             <button className="hero-btn">Discover More</button>
           </Link>
