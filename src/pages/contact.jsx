@@ -28,7 +28,7 @@ const Contact = () => {
         {/* Address / Info Sections */}
         <section className="contact-section">
           <h2>Headquarters</h2>
-          <p>Wazo Road, Mkanada, PO Box 10250, Dar es Salaam, Tanzania</p>
+          <p>Wazo Road, Mkanada, PO Box 22, Dar es Salaam, Tanzania</p>
         </section>
 
         <section className="contact-section">
@@ -42,15 +42,13 @@ const Contact = () => {
 
         <section className="contact-section">
           <h2>Contact Numbers</h2>
-          <p>+255710333666, +255745999995</p>
+          <p>+255745999995</p>
         </section>
 
         <section className="contact-section">
           <h2>Email Addresses</h2>
           <p>
             General Inquiries: <a href="mailto:info@nagggroup.co.tz">info@nagggroup.co.tz</a><br />
-            Managing Director: <a href="mailto:md@nagggroup.co.tz">md@nagggroup.co.tz</a><br />
-            Operations: <a href="mailto:nabeel@nagggroup.co.tz">nabeel@nagggroup.co.tz</a>
           </p>
         </section>
 

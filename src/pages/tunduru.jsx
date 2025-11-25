@@ -21,13 +21,13 @@ function Tunduru() {
           Tunduru Water Project
         </h1>
         <p className="text-gray-700 text-lg sm:text-xl mb-4 text-center">
-          The Tunduru Water Supply Project was aimed at improving access to clean
+          The Tunduru Water Supply Project is aiming at improving access to clean
           water in rural communities. Our engineering and environmental teams
-          collaborated to build a sustainable water system with pipelines,
+          are collaborating to build a sustainable water system with pipelines,
           reservoirs, and treatment facilities.
         </p>
         <p className="text-gray-700 text-lg sm:text-xl mb-4 text-center">
-          Through this project, NAGG Group has helped transform public health
+          Through this project, NAGG Group is helping transform public health
           outcomes and community welfare across the region.
         </p>
         <div className="text-gray-800 text-lg sm:text-xl space-y-1 text-center">

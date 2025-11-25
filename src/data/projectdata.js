@@ -70,8 +70,8 @@ const projectdata = [
     category: "Construction",
     location: "Tanzania",
     client: "National Irrigation Commission",
-    status: "Ongoing",
-    year: "2025",
+    status: "Planning",
+    year: "TBA",
     image: sasengaIrrigation,
     link: "/sasenga",
   },
@@ -89,7 +89,7 @@ const projectdata = [
   
   {
     id: 11,
-    title: "Construction of Marine Terminal Tank",
+    title: "Construction of Marine Terminal",
     category: "Construction",
     location: "Tanzania",
     client: "EACOP",
@@ -102,7 +102,7 @@ const projectdata = [
     id: 12,
     title: "Construction of Tobacco Factory",
     category: "Construction",
-    location: "Tanzania",
+    location: "Bagamoyo-Kerege",
     client: "Mastermind Tabacco Tanzania",
     status: "New Project",
     year: "2025",

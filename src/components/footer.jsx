@@ -1,75 +1,78 @@
 import React from "react";
 import "./footer.css";
+import { FaInstagram, FaWhatsapp, FaFacebook, FaLinkedin, FaXTwitter } from "react-icons/fa6";
 import logo from "../assets/7.logo.jpg";
 
 const Footer = () => {
   return (
     <footer className="footer">
-      <div className="footer-container">
-
+      {/* TOP SECTION */}
+      <div className="footer-top">
+        
         {/* LOGO + ABOUT */}
-        <div className="footer-section">
-          <img src={logo} alt="NAGG Group Logo" className="footer-logo" />
-          <p className="footer-about">
-            NAGG Group. Perfection is the Goal.
+        <div className="footer-brand">
+          <img src={logo} alt="NAGG Logo" className="footer-logo" />
+
+          <p className="footer-description">
+            NAGG Group — Delivering excellence in Construction, Mining, Logistics,
+            Real Estate, and Oil & Gas across East Africa.
           </p>
         </div>
 
         {/* QUICK LINKS */}
-        <div className="footer-section">
+        <div className="footer-links">
           <h3>Quick Links</h3>
-          <ul className="footer-links">
-            <li><a href="/">Home</a></li>
+          <ul>
             <li><a href="/about">About Us</a></li>
-            <li><a href="/our-projects">Our Projects</a></li>
-            <li><a href="/sustainability">Sustainability</a></li>
+            <li><a href="/our-projects">Projects</a></li>
+            <li><a href="/services">Services</a></li>
             <li><a href="/contact">Contact</a></li>
           </ul>
         </div>
 
-        {/* CONTACT INFORMATION */}
-        <div className="footer-section">
-          <h3>Contact Information</h3>
+        {/* CONTACT INFO */}
+        <div className="footer-contact">
+          <h3>Contact</h3>
+          <p>Dar es Salaam, Tanzania</p>
+          <p>Email: info@nagg.co.tz</p>
+          <p>Phone: +255 745 999 995</p>
+        </div>
 
-          <p>
-            Wazo Road, Mkanada<br />
-            PO Box 10250, Dar es Salaam, Tanzania
-          </p>
+        {/* SOCIALS */}
+        <div className="footer-socials">
+          <h3>Follow Us</h3>
+          <div className="social-icons">
 
-          <p><strong>Branches:</strong></p>
-          <ul className="footer-branch-list">
-            <li>Dodoma: Opposite Martin Luther King School</li>
-            <li>Tabora: Cheyo Airport Road</li>
-            <li>Kahama: Opposite Kahama Airport</li>
-          </ul>
-
-          <p><strong>Phone:</strong> +255710333666, +255745999995</p>
-
-          <p>
-            <strong>Email:</strong><br />
-            <a href="mailto:info@nagggroup.co.tz">info@nagggroup.co.tz</a><br />
-            <a href="mailto:md@nagggroup.co.tz">md@nagggroup.co.tz</a><br />
-            <a href="mailto:nabeel@nagggroup.co.tz">nabeel@nagggroup.co.tz</a>
-          </p>
-
-          <p>
-            <strong>Instagram:</strong><br />
-            <a 
-              href="https://instagram.com/nagg_group" 
-              target="_blank" 
-              rel="noopener noreferrer"
-            >
-              @nagg_group
+            <a href="https://instagram.com/nagg_group" target="_blank" rel="noopener noreferrer">
+              <FaInstagram />
             </a>
-          </p>
+
+            <a href="https://x.com/onenagg?s=11" target="_blank" rel="noopener noreferrer">
+              <FaXTwitter />
+            </a>
+
+            <a href="https://wa.me/255745999995" target="_blank" rel="noopener noreferrer">
+              <FaWhatsapp />
+            </a>
+
+            <a href="#" target="_blank" rel="noopener noreferrer">
+              <FaFacebook />
+            </a>
+
+            <a href="https://www.linkedin.com/in/onenagg-group-5104a4362" target="_blank" rel="noopener noreferrer">
+              <FaLinkedin />
+            </a>
+
+          </div>
         </div>
 
       </div>
 
-      {/* COPYRIGHT */}
+      {/* BOTTOM SECTION */}
       <div className="footer-bottom">
         <p>© {new Date().getFullYear()} NAGG Group. All Rights Reserved.</p>
       </div>
+
     </footer>
   );
 };

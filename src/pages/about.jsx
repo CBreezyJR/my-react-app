@@ -17,7 +17,7 @@ const About = () => {
             managing complex large-scale projects with top quality standards.
             We have expanded our technical abilities with a strong team of
             engineers from Turkey, China, South Africa, and highly experienced
-            local engineers. We are a civil construction company with Class 1
+            local engineers. We are a civil construction company with Civil Class 1
             and Building Class 2 certifications.
           </p>
         </div>

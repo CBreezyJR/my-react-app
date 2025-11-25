@@ -27,7 +27,7 @@ function PS3() {
           oil transfer along the EACOP route.
         </p>
         <p className="text-gray-700 text-lg sm:text-xl mb-4 text-center">
-          Our team delivered comprehensive civil, mechanical, and electrical
+          Our team is delivering comprehensive civil, mechanical, and electrical
           works, ensuring alignment with international energy standards and
           safety regulations.
         </p>

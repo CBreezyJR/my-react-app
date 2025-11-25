@@ -21,25 +21,18 @@ function Sasenga() {
       {/* Project Info */}
       <div className="max-w-4xl mx-auto mb-12">
         <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4 text-center">
-          Sasenga Bridge Construction
+          FORREHABILITATION OF SASENGA IRRIGATION SCHEME
         </h1>
         <p className="text-gray-700 text-lg sm:text-xl mb-4 text-center">
-          The Sasenga Bridge project was a landmark civil engineering effort
-          designed to improve transportation and connectivity in rural regions.
-          NAGG Group’s expertise in structural and hydraulic engineering
-          delivered a bridge capable of withstanding heavy load and seasonal
-          flooding.
+          The project involves the full rehabilitation and improvement of the Sasenga Irrigation Scheme located in Ileje District, Songwe Region. The works aim to restore and enhance the scheme’s functionality to support reliable water distribution, improve agricultural productivity, and strengthen community access to sustainable irrigation infrastructure.
         </p>
         <p className="text-gray-700 text-lg sm:text-xl mb-4 text-center">
-          Using advanced concrete and steel systems, we ensured safety,
-          durability, and longevity while keeping the environmental footprint
-          minimal. The bridge now stands as a critical infrastructure link in
-          the Sasenga area.
+        These improvements will support sustainable agriculture, boost productivity for local farmers, and strengthen long-term community development in the region.
         </p>
         <div className="text-gray-800 text-lg sm:text-xl space-y-1 text-center">
-          <p><strong>Client:</strong> Tanzania National Roads Agency (TANROADS)</p>
+          <p><strong>Client:</strong>National Irrigation Company</p>
           <p><strong>Location:</strong> Kigoma, Tanzania</p>
-          <p><strong>Year:</strong> 2023</p>
+          <p><strong>Year:</strong>TBA</p>
         </div>
       </div>
 
@@ -47,9 +40,9 @@ function Sasenga() {
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
         {images.map((img, index) => (
           <div key={index} className="overflow-hidden rounded-lg shadow-lg">
-            <img 
-              src={img} 
-              alt={`Sasenga ${index + 1}`} 
+            <img
+              src={img}
+              alt={`Sasenga ${index + 1}`}
               className="w-full h-60 sm:h-64 md:h-48 lg:h-56 object-cover transition-transform duration-300 hover:scale-105"
             />
           </div>

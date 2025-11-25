@@ -31,9 +31,9 @@ function Posta() {
           offering a robust space for commercial offices and public operations.
         </p>
         <p className="text-gray-700 mb-4">
-          Our team oversaw every stage of construction, ensuring structural
-          integrity, design precision, and environmental compliance. The project
-          also demonstrates our proficiency in integrating advanced building
+          Our team is currently overseeing every stage of construction, ensuring structural
+          integrity, design precision, and environmental compliance. The project is
+          also demonstrating our proficiency in integrating advanced building
           systems while maintaining time and cost efficiency.
         </p>
         <p className="text-gray-700 mb-1"><strong>Client:</strong> Tanzania Posts Corporation</p>

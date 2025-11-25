@@ -17,18 +17,18 @@ function Marine() {
   return (
     <div className="marine-page">
       <div className="marine-container">
-        <h1 className="marine-title">Construction of Marine Terminal Tank</h1>
+        <h1 className="marine-title">Construction of Marine Terminal</h1>
 
         <p className="marine-text">
-          This marine terminal tank project was executed for the East African Crude
+          This marine terminal tank project is being executed for the East African Crude
           Oil Pipeline (EACOP). The project includes heavy civil works, tank
           foundation structures, safety integrations, and pipeline interface
           preparations.
         </p>
 
         <p className="marine-text">
-          Our engineering team ensured all marine construction safety protocols,
-          environmental standards, and international compliance requirements were
+          Our engineering team is ensuring all marine construction safety protocols,
+          environmental standards, and international compliance requirements are
           fully met.
         </p>
 

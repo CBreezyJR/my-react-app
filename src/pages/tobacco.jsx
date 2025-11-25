@@ -21,8 +21,8 @@ function Tobacco() {
           Construction of Mastermind Tobacco Factory
         </h1>
         <p className="text-gray-700 text-lg sm:text-xl mb-4 text-center">
-          This industrial facility was designed and constructed for Mastermind
-          Tobacco Tanzania. NAGG Group delivered a modern manufacturing plant
+          This industrial facility is being designed and constructed for Mastermind
+          Tobacco Tanzania. NAGG Group is currently delivering a modern manufacturing plant
           that integrates sustainable energy use, optimized workflow, and
           high-standard safety systems.
         </p>
@@ -32,8 +32,8 @@ function Tobacco() {
         </p>
         <div className="text-gray-800 text-lg sm:text-xl space-y-1 text-center">
           <p><strong>Client:</strong> Mastermind Tobacco Tanzania</p>
-          <p><strong>Location:</strong> Morogoro, Tanzania</p>
-          <p><strong>Year:</strong> 2024</p>
+          <p><strong>Location:</strong> Bagamoyo, Tanzania</p>
+          <p><strong>Year:</strong> 2025</p>
         </div>
       </div>
 

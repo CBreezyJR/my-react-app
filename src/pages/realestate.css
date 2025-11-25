@@ -1,127 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap');
+
 .realestate-page {
-    background-color: #f8f8f8; /* off-white background */
-    color: #0b1e39; /* dark blue text */
-    min-height: 100vh;
-    padding: 6rem 2rem 4rem;
-    font-family: 'Raleway', sans-serif;
-    text-align: center;
-    overflow-x: hidden;
-  }
-  
-  .realestate-header {
-    max-width: 850px;
-    margin: 0 auto 3rem;
-  }
-  
+  font-family: 'Raleway', sans-serif;
+  background: #f9f9fb;
+  color: #0f1740;
+  padding-bottom: 50px;
+  overflow-x: hidden;
+}
+
+/* HEADER */
+.realestate-header {
+  text-align: center;
+  padding: 70px 20px;
+  background: linear-gradient(to bottom right, #f4f5f7, #1b215c);
+  color: white;
+}
+
+.realestate-header h1 {
+  font-size: 42px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  letter-spacing: 1px;
+}
+
+.realestate-header p {
+  max-width: 750px;
+  margin: auto;
+  font-size: 16px;
+  line-height: 1.8;
+  opacity: 0.95;
+}
+
+/* SECTION TITLE */
+.projects-section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.projects-section h2 {
+  font-size: 32px;
+  font-weight: 600;
+  margin-bottom: 40px;
+  color: #16296e;
+}
+
+/* PROJECT GRID */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 35px;
+  max-width: 1300px;
+  margin: auto;
+}
+
+/* PROJECT CARD */
+.project-card {
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  transition: 0.35s ease;
+  cursor: pointer;
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18);
+}
+
+/* IMAGE */
+.project-image img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  filter: brightness(0.92);
+  transition: 0.3s ease;
+}
+
+.project-card:hover .project-image img {
+  filter: brightness(1);
+}
+
+/* INFO */
+.project-info {
+  padding: 25px;
+  text-align: left;
+}
+
+.project-info h3 {
+  font-size: 22px;
+  color: #1a1d4e;
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+
+.project-info p {
+  font-size: 15px;
+  line-height: 1.7;
+  color: #363a66;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
   .realestate-header h1 {
-    font-size: 2.8rem;
-    font-weight: 700;
-    margin-bottom: 1rem;
-    color: #e63946; /* red title */
+    font-size: 32px;
   }
-  
+
   .realestate-header p {
-    font-size: 1.1rem;
-    color: #0b1e39; /* dark blue description */
-    line-height: 1.6;
-    opacity: 0.9;
+    font-size: 15px;
   }
-  
-  /* Projects Section */
-  .projects-section {
-    margin-top: 4rem;
-  }
-  
-  .projects-section h2 {
-    font-size: 2rem;
-    font-weight: 700;
-    margin-bottom: 2rem;
-    color: #e63946; /* red section titles */
-  }
-  
-  /* Grid Layout */
-  .projects-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-    gap: 2rem;
-    justify-items: center;
-  }
-  
-  /* Project Card */
-  .project-card {
-    background: #ffffff;
-    border-radius: 14px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    width: 100%;
-    max-width: 380px;
-    transition: transform 0.4s ease, box-shadow 0.4s ease;
-  }
-  
-  .project-card:hover {
-    transform: translateY(-6px) scale(1.02);
-    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
-  }
-  
-  /* Image */
-  .project-image {
-    width: 100%;
-    height: 220px;
-    overflow: hidden;
-    background: #ececec;
-  }
-  
-  .project-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.4s ease, filter 0.4s ease;
-  }
-  
-  .project-card:hover .project-image img {
-    transform: scale(1.08);
-    filter: brightness(1.1);
-  }
-  
-  /* Info Section */
-  .project-info {
-    text-align: left;
-    padding: 1.2rem 1.5rem 1.5rem;
-  }
-  
+
   .project-info h3 {
-    font-size: 1.3rem;
-    font-weight: 600;
-    color: #e63946; /* red project titles */
-    margin-bottom: 0.7rem;
+    font-size: 20px;
   }
-  
+
   .project-info p {
-    font-size: 0.95rem;
-    color: #0b1e39; /* dark blue description */
-    margin-bottom: 0.3rem;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 500px) {
+  .realestate-header {
+    padding: 50px 15px;
   }
   
-  /* Responsive */
-  @media (max-width: 768px) {
-    .realestate-page {
-      padding: 5rem 1rem 3rem;
-    }
-  
-    .realestate-header h1 {
-      font-size: 2.2rem;
-    }
-  
-    .realestate-header p {
-      font-size: 1rem;
-    }
-  
-    .projects-grid {
-      gap: 1.5rem;
-    }
-  
-    .project-card {
-      max-width: 360px;
-    }
+  .projects-section {
+    padding: 40px 15px;
   }
-  
+}

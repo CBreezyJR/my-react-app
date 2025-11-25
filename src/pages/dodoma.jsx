@@ -21,14 +21,14 @@ function Dodoma() {
         </h1>
 
         <p className="mb-4">
-          This mining project involved professional extraction and processing support 
-          for Nickel Ore operations in Dodoma, Tanzania. NAGG Group delivered a full scope 
+          This mining project involves professional extraction and processing support 
+          for Nickel Ore operations in Dodoma, Tanzania. NAGG Group delivers a full scope 
           of mining solutions including site preparation, excavation, material handling, 
           and logistical support.
         </p>
 
         <p className="mb-4">
-          As a completed project, it reflects our continued commitment to operational 
+          It reflects our continued commitment to operational 
           efficiency, safety, and sustainable mining practices.
         </p>
 
