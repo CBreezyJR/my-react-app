@@ -25,8 +25,8 @@ const Footer = () => {
           <ul>
             <li><a href="/about">About Us</a></li>
             <li><a href="/our-projects">Projects</a></li>
-            <li><a href="/services">Services</a></li>
-            <li><a href="/contact">Contact</a></li>
+            <li><a href="/what-we-do">Services</a></li>
+            <li><a href="/contact-us">Contact</a></li>
           </ul>
         </div>
 
@@ -35,7 +35,7 @@ const Footer = () => {
           <h3>Contact</h3>
           <p>Dar es Salaam, Tanzania</p>
           <p>Email: info@nagg.co.tz</p>
-          <p>Phone: +255 745 999 995</p>
+          <a href="https://wa.me/255745999995">Phone: +255 745 999 995</a>
         </div>
 
         {/* SOCIALS */}

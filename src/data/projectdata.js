@@ -15,7 +15,7 @@ import bahiQuarry from "../assets/bahiquarry.jpg";
 import nickelMining from "../assets/nditi10.jpg";
 import coalMining from "../assets/coal10.jpg";
 import naggTransport from "../assets/naggtransportation.png";
-import fuelTransport from "../assets/fueltransportation.png";
+import fuelTransport from "../assets/fueltransportation.jpg";
 import yapiTransport from "../assets/yapitransportation.jpg";
 import cargoTransport from "../assets/cargotransportation.jpg";
 import ironOreTransport from "../assets/3.logistics.jpg";

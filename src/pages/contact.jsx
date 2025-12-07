@@ -66,14 +66,23 @@ const Contact = () => {
             Fill out our online form to request an estimate or for general questions about our services. We look forward to serving you!
           </p>
 
-          <form className="contact-form">
-            <input type="text" placeholder="Full Name *" required />
-            <input type="email" placeholder="Email Address *" required />
-            <input type="text" placeholder="Phone Number" />
-            <input type="text" placeholder="Subject" />
-            <textarea placeholder="Message" rows="5"></textarea>
+          <form
+            className="contact-form"
+            action="https://formsubmit.co/info@nagggroup.co.tz"
+            method="POST"
+          >
+            <input type="hidden" name="_captcha" value="false" />
+            <input type="hidden" name="_template" value="table" />
+
+            <input type="text" name="Full Name" placeholder="Full Name *" required />
+            <input type="email" name="Email" placeholder="Email Address *" required />
+            <input type="text" name="Phone" placeholder="Phone Number" />
+            <input type="text" name="Subject" placeholder="Subject" />
+            <textarea name="Message" placeholder="Message" rows="5"></textarea>
+
             <button type="submit">Send Message</button>
           </form>
+
         </section>
 
         {/* Google Map */}
