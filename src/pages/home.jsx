@@ -1,15 +1,14 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { FaHammer, FaTruck, FaOilCan, FaBuilding, FaCogs, FaIndustry } from "react-icons/fa";
+import {
+  FaHammer,
+  FaTruck,
+  FaOilCan,
+  FaBuilding,
+  FaCogs,
+  FaIndustry,
+} from "react-icons/fa";
 
-import posta10 from "../assets/posta10.jpg";
-import tunduruWater from "../assets/tunduru10.jpg";
-import sasengaIrrigation from "../assets/sasenga10.jpg";
-import tobaccoFactory from "../assets/tobacco10.jpg";
-import pumpStation from "../assets/pumpstation.png";
-import marineTerminal from "../assets/marine.png";
-import sgrEarthworks from "../assets/sgrearthworks.png";
-import pipelineInstallation from "../assets/4.oil.png";
 import Hero01 from "../assets/hero01.jpg";
 import Hero02 from "../assets/hero02.jpg";
 import Hero03 from "../assets/hero03.jpg";
@@ -17,131 +16,140 @@ import Hero04 from "../assets/hero04.jpg";
 import Hero05 from "../assets/hero05.jpg";
 import Hero06 from "../assets/hero06.jpg";
 
+import posta10 from "../assets/posta10.jpg";
+import sasengaIrrigation from "../assets/sasenga10.jpg";
+import tobaccoFactory from "../assets/tobacco10.jpg";
+import tunduruWater from "../assets/tunduru10.jpg";
+import pumpStation from "../assets/pumpstation.png";
+import marineTerminal from "../assets/marine.png";
+import sgrEarthworks from "../assets/sgrearthworks.png";
+import pipelineInstallation from "../assets/4.oil.png";
+
+import CppLogo from "../assets/cpp.jpg";
+import DocgLogo from "../assets/docg.jpg";
+import EacopLogo from "../assets/eacop.jpg";
+import GsmLogo from "../assets/gsm.jpg";
+import MttLogo from "../assets/mtt1.png";
+import NicLogo from "../assets/nic.jpg";
+import RubisLogo from "../assets/rubis.jpg";
+import TbaLogo from "../assets/tba.jpg";
+import TrcLogo from "../assets/trc.jpg";
+import TuwasaLogo from "../assets/tuwasa.jpg";
+import YapiLogo from "../assets/yapi.jpg";
+
 import "./home.css";
 
 function Home() {
-  const [currentSlide, setCurrentSlide] = useState(0);
-
   const slides = [Hero01, Hero02, Hero03, Hero04, Hero05, Hero06];
+  const [currentSlide, setCurrentSlide] = useState(0);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentSlide(prev => (prev + 1) % slides.length);
-    }, 7000); // auto slide every 3 seconds
-
+      setCurrentSlide((prev) => (prev + 1) % slides.length);
+    }, 6000);
     return () => clearInterval(interval);
   }, []);
 
-  const nextSlide = () => {
-    setCurrentSlide(prev => (prev + 1) % slides.length);
-  };
-
-  const prevSlide = () => {
-    setCurrentSlide(prev =>
-      prev === 0 ? slides.length - 1 : prev - 1
-    );
-  };
-
+  const partners = [
+    CppLogo,
+    DocgLogo,
+    EacopLogo,
+    GsmLogo,
+    MttLogo,
+    NicLogo,
+    RubisLogo,
+    TbaLogo,
+    TrcLogo,
+    TuwasaLogo,
+    YapiLogo,
+  ];
 
   return (
     <div className="home-container">
 
-      {/* HERO SECTION – IMAGE SLIDER WITH ARROWS */}
-      <section className="hero-section">
-
-        <div className="hero-slider">
-          {[
-            Hero01,
-            Hero02,
-            Hero03,
-            Hero04,
-            Hero05,
-            Hero06
-          ].map((img, index) => (
-            <div
-              className={`slide ${index === currentSlide ? "active" : ""}`}
-              key={index}
-            >
-              <img src={img} alt={`slide-${index}`} />
-            </div>
-          ))}
-        </div>
-
+      {/* HERO */}
+      <section className="hero-wrapper">
+        <img src={slides[currentSlide]} className="hero-image" />
         <div className="hero-overlay"></div>
 
-        {/* ARROWS */}
-        <button className="arrow arrow-left" onClick={prevSlide}>
-          ❮
-        </button>
-        <button className="arrow arrow-right" onClick={nextSlide}>
-          ❯
-        </button>
-
         <div className="hero-content">
-          <h1>Welcome to NAGG Group</h1>
-          <Link to="/our-services">
-            <button className="hero-btn">Discover More</button>
-          </Link>
-        </div>
-
-      </section>
-
-
-
-
-      {/* ⭐ DO NOT TOUCH — OUR SERVICES SECTION EXACTLY PRESERVED ⭐ */}
-      <section className="py-6 px-3 bg-gradient-to-b from-black/5 to-transparent text-center">
-        <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 tracking-wide">
-          Our Services
-        </h2>
-
-        <p className="max-w-3xl mx-auto text-gray-300 mb-14 text-base md:text-lg leading-relaxed">
-          At <span className="text-red-500 font-semibold">NAGG Group</span>, we provide comprehensive services spanning construction, mining,
-          oil & gas, logistics, real estate, and equipment rental — all driven by our
-          commitment to quality and efficiency.
-        </p>
-
-        <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-3 place-items-center">
-          <Link to="/construction" className="group bg-white/5 hover:bg-white/10 p-8 rounded-2xl w-full max-w-sm backdrop-blur-md transition-all duration-300 hover:scale-105">
-            <FaHammer className="text-red-500 text-5xl mb-4 mx-auto group-hover:scale-110 duration-300" />
-            <h3 className="text-xl font-semibold text-white mb-2">Construction</h3>
-            <p className="text-gray-300 text-sm">High-standard infrastructure & engineering projects nationwide.</p>
-          </Link>
-
-          <Link to="/logistics" className="group bg-white/5 hover:bg-white/10 p-8 rounded-2xl w-full max-w-sm backdrop-blur-md transition-all duration-300 hover:scale-105">
-            <FaTruck className="text-red-500 text-5xl mb-4 mx-auto group-hover:scale-110 duration-300" />
-            <h3 className="text-xl font-semibold text-white mb-2">Logistics & Transport</h3>
-            <p className="text-gray-300 text-sm">Reliable logistics for equipment, cargo, and bulk materials.</p>
-          </Link>
-
-          <Link to="/oil" className="group bg-white/5 hover:bg-white/10 p-8 rounded-2xl w-full max-w-sm backdrop-blur-md transition-all duration-300 hover:scale-105">
-            <FaOilCan className="text-red-500 text-5xl mb-4 mx-auto group-hover:scale-110 duration-300" />
-            <h3 className="text-xl font-semibold text-white mb-2">Oil & Gas</h3>
-            <p className="text-gray-300 text-sm">Supporting pipeline & energy infrastructure across Tanzania.</p>
-          </Link>
-
-          <Link to="/realestate" className="group bg-white/5 hover:bg-white/10 p-8 rounded-2xl w-full max-w-sm backdrop-blur-md transition-all duration-300 hover:scale-105">
-            <FaBuilding className="text-red-500 text-5xl mb-4 mx-auto group-hover:scale-110 duration-300" />
-            <h3 className="text-xl font-semibold text-white mb-2">Real Estate</h3>
-            <p className="text-gray-300 text-sm">Modern, sustainable property development.</p>
-          </Link>
-
-          <Link to="/mining" className="group bg-white/5 hover:bg-white/10 p-8 rounded-2xl w-full max-w-sm backdrop-blur-md transition-all duration-300 hover:scale-105">
-            <FaCogs className="text-red-500 text-5xl mb-4 mx-auto group-hover:scale-110 duration-300" />
-            <h3 className="text-xl font-semibold text-white mb-2">Mining</h3>
-            <p className="text-gray-300 text-sm">Efficient extraction, crushing & mineral logistics solutions.</p>
-          </Link>
-
-          <Link to="/rental" className="group bg-white/5 hover:bg-white/10 p-8 rounded-2xl w-full max-w-sm backdrop-blur-md transition-all duration-300 hover:scale-105">
-            <FaIndustry className="text-red-500 text-5xl mb-4 mx-auto group-hover:scale-110 duration-300" />
-            <h3 className="text-xl font-semibold text-white mb-2">Equipment Rental</h3>
-            <p className="text-gray-300 text-sm">Wide range of heavy machinery & industrial tools.</p>
-          </Link>
+          <h1>Building Tanzania’s Future.</h1>
+          <p>Engineering, Infrastructure, Logistics & Energy Solutions.</p>
+          <Link to="/what-we-do" className="hero-btn">Discover More</Link>
         </div>
       </section>
-      {/* ⭐ END OF UNTOUCHED OUR SERVICES SECTION ⭐ */}
 
+      {/* PRINCIPLES SECTION */}
+      <section className="principles">
+        <h2 className="section-title">Our Core Principles</h2>
+        <div className="principles-grid">
 
+          <div className="p-card">
+            <h3>Quality</h3>
+            <p>We ensure strict quality standards on all our projects.</p>
+          </div>
+
+          <div className="p-card">
+            <h3>Safety</h3>
+            <p>We follow the Tanzania OSHA Act No.05 (2003).</p>
+          </div>
+
+          <div className="p-card">
+            <h3>Innovation</h3>
+            <p>We integrate modern systems and new technologies.</p>
+          </div>
+
+          <div className="p-card">
+            <h3>Sustainability</h3>
+            <p>We build with environmental responsibility in mind.</p>
+          </div>
+
+        </div>
+      </section>
+
+      {/* SERVICES SECTION */}
+      <section className="services-section">
+        <h2 className="section-title">Our Services</h2>
+        <div className="services-grid">
+
+          <Link to="/construction" className="service-card">
+            <FaHammer className="service-icon" />
+            <h3>Construction</h3>
+            <p>Roads, buildings, bridges, civil works.</p>
+          </Link>
+
+          <Link to="/logistics" className="service-card">
+            <FaTruck className="service-icon" />
+            <h3>Logistics</h3>
+            <p>Heavy transport & machinery movement.</p>
+          </Link>
+
+          <Link to="/oil" className="service-card">
+            <FaOilCan className="service-icon" />
+            <h3>Oil & Gas</h3>
+            <p>Pipeline & energy infrastructure.</p>
+          </Link>
+
+          <Link to="/realestate" className="service-card">
+            <FaBuilding className="service-icon" />
+            <h3>Real Estate</h3>
+            <p>Modern developments & commercial spaces.</p>
+          </Link>
+
+          <Link to="/mining" className="service-card">
+            <FaCogs className="service-icon" />
+            <h3>Mining</h3>
+            <p>Extraction, processing & logistics.</p>
+          </Link>
+
+          <Link to="/rental" className="service-card">
+            <FaIndustry className="service-icon" />
+            <h3>Equipment Rental</h3>
+            <p>Heavy machinery & industrial equipment.</p>
+          </Link>
+
+        </div>
+      </section>
 
       {/* PROJECTS SECTION */}
       <section className="projects-wrapper">
@@ -230,6 +238,27 @@ function Home() {
 
         </div>
       </section>
+
+      {/* PARTNERS */}
+      <section className="partners-section">
+        <h2 className="partners-title">Our Partners</h2>
+        <p className="partners-description">
+          We are proud to work with leading national and international organizations
+          across energy, construction, logistics, and infrastructure development.
+          These strategic partnerships strengthen our capacity to deliver world-class
+          engineering solutions across Tanzania.
+        </p>
+
+        <div className="partners-grid">
+          {partners.map((logo, index) => (
+            <div key={index} className="partner-card">
+              <img src={logo} alt="Partner" className="partner-logo" />
+            </div>
+          ))}
+        </div>
+      </section>
+
+
     </div>
   );
 }

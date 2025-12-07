@@ -1,141 +1,154 @@
+/* =======================================
+   GENERAL PAGE STYLING
+======================================= */
+
 .oil-page {
-    background-color: #f8f8f8; /* off-white */
-    color: #0b1e39; /* dark blue text */
-    min-height: 100vh;
-    padding: 6rem 2rem 4rem;
-    font-family: 'Raleway', sans-serif;
-    text-align: center;
-    overflow-x: hidden;
+  background: #f4f4f6;
+  font-family: "Raleway", sans-serif;
+  padding-bottom: 60px;
+  color: #0e1a36;
+}
+
+/* =======================================
+   TOP SHOWCASE SECTION
+======================================= */
+
+.showcase-section {
+  text-align: center;
+  padding: 40px 20px 20px;
+}
+
+.oil-title {
+  font-size: 42px;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+.oil-intro {
+  max-width: 750px;
+  margin: 0 auto 35px;
+  font-size: 17px;
+  opacity: 0.9;
+  line-height: 1.6;
+}
+
+/* STANDALONE SHOWCASE IMAGES */
+.showcase-gallery {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+}
+
+.showcase-img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 18px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+}
+
+/* =======================================
+   PROJECT CARDS
+======================================= */
+
+.projects-section {
+  margin-top: 60px;
+  padding: 0 20px;
+}
+
+.projects-header {
+  text-align: center;
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 35px;
+}
+
+/* CENTER THE PROJECT CARDS */
+.projects-grid {
+  max-width: 900px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 25px;
+  justify-content: center;
+}
+
+/* CARD STYLE */
+.project-card {
+  background: white;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 8px 22px rgba(0,0,0,0.08);
+  text-align: center;
+  transition: 0.25s ease;
+  display: block;        /* allows margin auto to work */
+  margin-left: auto;     
+  margin-right: auto; 
+}
+
+.project-card:hover {
+  transform: translateY(-6px);
+}
+
+.project-card h3 {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.project-details p {
+  margin: 6px 0;
+  color: #2a2a3a;
+}
+
+/* STATUS LABELS */
+.status {
+  margin-top: 10px;
+  padding: 6px 12px;
+  border-radius: 8px;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.status.completed {
+  background: #d1f7d6;
+  color: #1d7d2f;
+}
+
+.status.ongoing {
+  background: #ffeac9;
+  color: #c76a00;
+}
+
+.status.planned {
+  background: #d7e5ff;
+  color: #0047ad;
+}
+
+/* =======================================
+   RESPONSIVE DESIGN
+======================================= */
+
+@media (max-width: 900px) {
+  .showcase-gallery {
+    grid-template-columns: repeat(2, 1fr);
   }
-  
-  .oil-header {
-    max-width: 850px;
-    margin: 0 auto 3rem;
+  .showcase-img {
+    height: 180px;
   }
-  
-  .oil-header h1 {
-    font-size: 2.8rem;
-    font-weight: 700;
-    margin-bottom: 1rem;
-    color: #e63946; /* red title */
+}
+
+@media (max-width: 600px) {
+  .oil-title {
+    font-size: 32px;
   }
-  
-  .oil-header p {
-    font-size: 1.1rem;
-    color: #0b1e39; /* dark blue description */
-    opacity: 0.9;
+  .showcase-gallery {
+    grid-template-columns: 1fr;
   }
-  
-  .projects-section {
-    margin-top: 4rem;
+  .showcase-img {
+    height: 200px;
   }
-  
-  .projects-section h2 {
-    font-size: 2rem;
-    font-weight: 700;
-    margin-bottom: 2rem;
-    color: #e63946; /* red section titles */
-  }
-  
-  .projects-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-    gap: 2rem;
-    justify-items: center;
-  }
-  
-  .project-card {
-    background: #ffffff;
-    border-radius: 14px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    width: 100%;
-    max-width: 380px;
-    transition: transform 0.4s ease, box-shadow 0.4s ease;
-  }
-  
-  .project-card:hover {
-    transform: translateY(-6px) scale(1.02);
-    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
-  }
-  
-  .project-image {
-    width: 100%;
-    height: 220px;
-    overflow: hidden;
-    background: #ececec;
-  }
-  
-  .project-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.4s ease, filter 0.4s ease;
-  }
-  
-  .project-card:hover .project-image img {
-    transform: scale(1.08);
-    filter: brightness(1.1);
-  }
-  
-  .project-info {
-    text-align: left;
-    padding: 1.2rem 1.5rem 1.5rem;
-  }
-  
-  .project-info h3 {
-    font-size: 1.3rem;
-    font-weight: 600;
-    color: #e63946; /* red project titles */
-    margin-bottom: 0.7rem;
-  }
-  
-  .project-info p {
-    font-size: 0.95rem;
-    color: #0b1e39; /* dark blue description */
-    margin-bottom: 0.3rem;
-  }
-  
-  .status {
-    font-weight: 600;
-  }
-  
-  .status.completed {
-    color: #88d498;
-  }
-  
-  .status.ongoing {
-    color: #f5cd79;
-  }
-  
-  .status.new-project,
-  .status.new {
-    color: #74b9ff;
-  }
-  
-  .status.planned {
-    color: #e17055;
-  }
-  
-  @media (max-width: 768px) {
-    .oil-page {
-      padding: 5rem 1rem 3rem;
-    }
-  
-    .oil-header h1 {
-      font-size: 2.2rem;
-    }
-  
-    .oil-header p {
-      font-size: 1rem;
-    }
-  
-    .projects-grid {
-      gap: 1.5rem;
-    }
-  
-    .project-card {
-      max-width: 360px;
-    }
-  }
-  
+}

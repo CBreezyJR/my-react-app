@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import "./ourservices.css";
 
 import constructionImg from "../assets/marine9.jpg";
 import miningImg from "../assets/nditi9.jpg";
@@ -55,46 +56,30 @@ const services = [
 
 export default function OurServices() {
   return (
-    <div className="pt-32 md:pt-40 px-6 font-['Raleway']">
+    <div className="services-page">
 
       {/* HERO SECTION */}
-      <section className="text-center flex flex-col items-center gap-20 pb-30">
-        <h1 className="text-3xl md:text-4xl font-bold text-gray-800">
-          Our Expertise, Your Success
-        </h1>
+      <section className="services-hero">
+        <h1>Our Expertise, Your Success</h1>
 
-        <p className="text-gray-600 max-w-2xl mx-auto text-base md:text-lg leading-relaxed">
-          NAGG Group provides comprehensive solutions across construction,
-          mining, oil & gas, logistics, real estate, and equipment rental —
-          driven by innovation, quality, and reliability.
+        <p>
+          NAGG Group provides comprehensive solutions across construction, mining,
+          oil & gas, logistics, real estate, and equipment rental — driven by
+          innovation, quality, and reliability.
         </p>
       </section>
+
       {/* SERVICES GRID */}
-      <section className="max-w-7xl mx-auto px-6 py-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      <section className="services-grid">
         {services.map((service, index) => (
-          <div
-            key={index}
-            className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300"
-          >
-            <img
-              src={service.image}
-              alt={service.title}
-              className="w-full h-48 object-cover"
-            />
+          <div className="service-card" key={index}>
+            <img src={service.image} alt={service.title} className="service-img" />
 
-            <div className="p-6">
-              <h2 className="text-xl font-semibold text-gray-800 mb-2">
-                {service.title}
-              </h2>
+            <div className="service-content">
+              <h2>{service.title}</h2>
+              <p>{service.description}</p>
 
-              <p className="text-gray-600 text-sm mb-4">
-                {service.description}
-              </p>
-
-              <Link
-                to={service.link}
-                className="inline-block mt-2 text-blue-600 font-medium hover:text-blue-800 transition"
-              >
+              <Link to={service.link} className="service-link">
                 Learn More →
               </Link>
             </div>

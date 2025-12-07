@@ -41,6 +41,7 @@ import Machinery from "./pages/machinery";
 import Factory from "./pages/factory";
 import CoalTransport from "./pages/coaltransport";
 import Bahi from "./pages/bahi";
+import Yongoma from "./pages/yongoma";
 
 // Components
 import Navbar from "./components/navbar";
@@ -139,6 +140,7 @@ function App() {
             <Route path="/factory" element={<Factory t={t} />} />
             <Route path="/coaltransport" element={<CoalTransport t={t} />} />
             <Route path="/bahi" element={<Bahi t={t} />} />
+            <Route path="/yongoma" element={<Yongoma t={t} />} />
           </Routes>
         </main>
 

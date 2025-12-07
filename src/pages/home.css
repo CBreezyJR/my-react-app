@@ -2,205 +2,156 @@
 
 .home-container {
   font-family: 'Raleway', sans-serif;
+  background: #f4f4f6;
   color: #0d1b3d;
-  background-color: #faf9f6;
 }
 
-/* --- HERO SECTION --- */
-.hero-section {
+/* HERO */
+.hero-wrapper {
   position: relative;
-  width: 100%;
-  height: 90vh;
+  height: 85vh;
   overflow: hidden;
 }
 
-/* Slider container */
-.hero-slider {
+.hero-image {
   position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-}
-
-/* Each slide */
-.slide {
-  position: absolute;
-  inset: 0;
-  opacity: 0;
-  transition: opacity 0.8s ease-in-out;
-}
-
-.slide.active {
-  opacity: 1;
-}
-
-.slide img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-/* Overlay */
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: rgba(0,0,0,0.25);
-  z-index: 1;
+  background: rgba(0,0,0,0.4);
 }
 
-/* ============ HERO TEXT UPDATED ============ */
 .hero-content {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: #fff;
-  text-align: center;
-  z-index: 3;
-}
-
-/* MAIN TITLE — Bold Red, Size 20px */
-.hero-content h1 {
-  color: #ece6e6;
-  font-size: 25px;
-  font-weight: 800;
-  letter-spacing: 1.5px;
-  margin-bottom: 12px;
-}
-
-/* SUBTITLE — White, Smaller */
-.hero-content h2 {
-  color: #ffffff;
-  font-size: 18px;
-  font-weight: 400;
-  margin-bottom: 30px;
-}
-
-/* CTA BUTTON — underline on hover */
-.hero-content a {
-  display: inline-block;
-  padding: 10px 25px;
-  border: 2px solid white;
-  border-radius: 5px;
-  text-decoration: none;
   color: white;
-  font-size: 15px;
-  font-weight: 600;
-  transition: all 0.3s ease;
+  text-align: center;
 }
 
-.hero-content a:hover {
-  text-decoration: underline;
-  border-color: #d32f2f;
+.hero-content h1 {
+  font-size: 50px;
+  font-weight: 800;
+  color: #d6d9e2;
 }
 
 .hero-content p {
+  margin-top: 10px;
+  font-size: 24px;
+  color: #d6d9e2;
+}
+
+.hero-btn {
+  margin-top: 25px;
+  display: inline-block;
+  padding: 12px 28px;
+  background: #ff5a1f;
   color: white;
-  font-size: 20px;
-}
-
-
-/* ARROWS */
-.arrow {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 3;
-  background: rgba(0,0,0,0.35);
-  border: none;
-  font-size: 2.2rem;
-  color: white;
-  width: 50px;
-  height: 50px;
-  cursor: pointer;
-  border-radius: 50%;
-  transition: background 0.3s ease;
-}
-
-.arrow:hover {
-  background: rgba(0,0,0,0.55);
-}
-
-.arrow-left {
-  left: 20px;
-}
-
-.arrow-right {
-  right: 20px;
-}
-
-
-/* --- OUR SERVICES SECTION --- */
-.services-section {
-  padding: 4rem 2rem;
-  text-align: center;
-  background: transparent;
-  color: #0d1b3d;
-}
-
-.services-section h2 {
-  font-size: 2.2rem;
+  border-radius: 8px;
   font-weight: 700;
-  margin-bottom: 1rem;
 }
 
-.services-intro {
-  font-size: 1rem;
-  margin-bottom: 2rem;
-  color: #333;
-  max-width: 800px;
+/* SECTION TITLES */
+.section-title {
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+/* PRINCIPLES */
+.principles {
+  padding: 60px 20px;
+}
+
+.principles-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.p-card {
+  background: white;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 8px 22px rgba(0,0,0,0.07);
+  text-align: center;
+}
+
+.p-card h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.p-card p {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+
+/* SERVICES */
+.services-section {
+  background: #0e1a36;
+  color: white;
+  padding: 70px 20px;
+  border-radius: 35px 35px 0 0;
+  margin-top: 40px;
+}
+
+.services-grid {
+  margin-top: 35px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
-  line-height: 1.6;
 }
 
-/* Grid layout: 3x2 */
-.services-grid {
-  display: grid !important;
-  grid-template-columns: repeat(3, 1fr) !important;
-  grid-template-rows: repeat(2, auto);
-  gap: 2rem;
-  justify-items: center;
-  align-items: start;
-  max-width: 1200px;
-  margin: 0 auto;
+.service-card {
+  background: #142243;
+  border: 1px solid #1f2d52;
+  padding: 30px;
+  border-radius: 22px;
+  text-align: center;
+  transition: 0.3s;
 }
 
-.service {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-decoration: none;
-  color: inherit;
-  transition: transform 0.3s ease;
+.service-card h3 {
+  color: #bc2525; /* title color */
+  font-size: 30px;
+  font-weight: 700;
 }
 
-.service:hover {
-  transform: translateY(-10px);
+
+.service-card p {
+  color: #d6d9e2;  /* <-- change this to ANY color you want */
+  font-size: 20px;
+  margin-top: 10px;
+  line-height: 1.5;
+}
+
+
+.service-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 28px rgba(0,0,0,0.25);
 }
 
 .service-icon {
-  font-size: 3rem;
-  color: red;
-  margin-bottom: 1rem;
-  transition: transform 0.3s ease;
-}
-
-.service:hover .service-icon {
-  transform: scale(1.2);
-}
-
-.service h3 {
-  font-size: 1.2rem;
-  font-weight: 700;
-  margin-bottom: 0.5rem;
-}
-
-.service p {
-  font-size: 0.95rem;
-  line-height: 1.4;
-  max-width: 220px;
-  text-align: center;
+  font-size: 50px;
+  margin-bottom: 15px;
+  color: #ff8a38;
+  display: block;        /* allows margin auto to work */
+  margin-left: auto;     
+  margin-right: auto; 
 }
 
 /* --- PROJECTS SECTION --- */
@@ -294,31 +245,256 @@
   cursor: pointer;
 }
 
-/* --- RESPONSIVE --- */
-@media (max-width: 1200px) {
-  .projects-gallery {
+/* PARTNERS SECTION */
+.partners-section {
+  background: #0e1a36;               /* deep navy */
+  padding: 80px 25px;
+  border-radius: 35px;
+  color: #ffffff;
+  margin-top: 60px;
+  text-align: center;
+}
+
+.partners-title {
+  font-size: 35px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.partners-description {
+  max-width: 750px;
+  color: #f4f4f6;
+  margin: 0 auto;
+  font-size: 20px;
+  opacity: 0.85;
+  line-height: 1.6;
+  margin-bottom: 45px;
+}
+
+/* GRID */
+.partners-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 28px;
+}
+
+/* CARD STYLE */
+.partner-card {
+  background: #fafbfc;              /* dark blue card */
+  padding: 20px;
+  border-radius: 18px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s ease;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.22);
+}
+
+.partner-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.30);
+}
+
+/* LOGO */
+.partner-logo {
+  max-width: 110px;
+  max-height: 100px;
+  object-fit: contain;
+  filter: none;   /* white logos for clean look */
+  opacity: 0.9;
+  transition: 0.25s ease;
+}
+
+.partner-card:hover .partner-logo {
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .partners-grid {
     grid-template-columns: repeat(3, 1fr);
   }
 }
 
-@media (max-width: 1024px) {
-  .services-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  .projects-gallery {
+@media (max-width: 600px) {
+  .partners-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
+/********************************************
+  RESPONSIVE FIXES FOR MOBILE + TABLET
+*********************************************/
+
+/* ===============================
+   1. HERO (phones + tablets)
+=============================== */
 @media (max-width: 768px) {
-  .services-grid {
-    grid-template-columns: 1fr;
-  }
-  .projects-gallery {
-    grid-template-columns: 1fr;
+  .hero-wrapper {
+    height: 65vh;
   }
 
   .hero-content h1 {
+    font-size: 32px;
+    line-height: 1.2;
+  }
+
+  .hero-content p {
+    font-size: 16px;
+  }
+
+  .hero-btn {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-wrapper {
+    height: 55vh;
+  }
+
+  .hero-content h1 {
+    font-size: 26px;
+  }
+
+  .hero-content p {
+    font-size: 14px;
+  }
+}
+
+/* ===============================
+   2. PRINCIPLES GRID
+=============================== */
+@media (max-width: 1024px) {
+  .principles-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .principles-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .p-card {
+    padding: 25px;
+  }
+}
+
+/* ===============================
+   3. SERVICES GRID
+=============================== */
+@media (max-width: 1024px) {
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+}
+
+@media (max-width: 600px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .service-card {
+    padding: 30px 20px;
+  }
+}
+
+/* ===============================
+   4. PROJECTS GRID
+=============================== */
+@media (max-width: 1200px) {
+  .projects-gallery,
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .projects-gallery,
+  .projects-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .project-frame,
+  .project-card {
+    height: auto;
+  }
+
+  .project-img {
+    height: 200px;
+  }
+}
+
+/* ===============================
+   5. PARTNERS GRID
+=============================== */
+@media (max-width: 1024px) {
+  .partners-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+  }
+
+  .partner-logo {
+    max-width: 75px;
+  }
+}
+
+@media (max-width: 600px) {
+  .partners-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .partner-logo {
+    max-width: 70px;
+    max-height: 50px;
+  }
+}
+
+/* ===============================
+   6. GLOBAL TYPOGRAPHY ADJUSTMENTS
+=============================== */
+@media (max-width: 600px) {
+  .section-title {
+    font-size: 22px;
+  }
+
+  .partners-description {
+    font-size: 14px;
+  }
+
+  .p-card h3 {
     font-size: 18px;
+  }
+
+  .service-card h3 {
+    font-size: 18px;
+  }
+}
+
+/* ===============================
+   7. SPACING FIXES
+=============================== */
+@media (max-width: 600px) {
+  .principles,
+  .services-section,
+  .projects-section,
+  .partners-section {
+    padding: 40px 15px;
+  }
+
+  .services-section {
+    border-radius: 25px 25px 0 0;
+  }
+
+  .partners-section {
+    border-radius: 25px;
   }
 }

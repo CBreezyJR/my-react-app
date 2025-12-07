@@ -52,7 +52,9 @@
   
   .rental-table-wrapper {
     width: 100%;
-    display: flex;
+    display: block;        /* allows margin auto to work */
+    margin-left: auto;     
+    margin-right: auto; 
     justify-content: center;   /* Center horizontally */
     margin-top: 40px;
   }
@@ -60,6 +62,9 @@
   .rental-table {
     width: 85%;
     max-width: 1100px;
+    display: block;        /* allows margin auto to work */
+    margin-left: auto;     
+    margin-right: auto; 
     border-collapse: separate;   /* IMPORTANT for rounded corners */
     border-spacing: 0;           /* No gaps */
     background: #fff;

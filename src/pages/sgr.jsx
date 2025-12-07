@@ -82,6 +82,7 @@ function SGR() {
           <p><strong>Client:</strong>TRC</p>
           <p><strong>Location:</strong>Tanzania</p>
           <p><strong>Year:</strong> 2024</p>
+          <p>These below are some of the side projects that have been done along the way of the completion of the SGR railway.</p>
         </div>
 
       {/* PROJECT CARDS */}
@@ -102,7 +103,7 @@ function SGR() {
 
       {/* SGR IMAGES SECTION */}
       <h2 className="projects-heading" style={{ marginTop: "3rem" }}>
-        SGR Progress Photo Gallery
+        SGR Gallery
       </h2>
 
       <div className="projects-gallery">

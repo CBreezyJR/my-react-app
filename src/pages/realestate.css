@@ -3,7 +3,7 @@
 .realestate-page {
   font-family: 'Raleway', sans-serif;
   background: #f9f9fb;
-  color: #0f1740;
+  color: #dfe0e8;
   padding-bottom: 50px;
   overflow-x: hidden;
 }
@@ -12,7 +12,7 @@
 .realestate-header {
   text-align: center;
   padding: 70px 20px;
-  background: linear-gradient(to bottom right, #f4f5f7, #1b215c);
+  background: #f9f9fb;
   color: white;
 }
 
@@ -26,7 +26,7 @@
 .realestate-header p {
   max-width: 750px;
   margin: auto;
-  font-size: 16px;
+  font-size: 25px;
   line-height: 1.8;
   opacity: 0.95;
 }
