@@ -70,7 +70,7 @@ export default function WhatWeDo() {
     typed.current = true;
 
     const title = titleRef.current;
-    const text = "Our Principles";
+    const text = "OUR PRINCIPLES";
     let i = 0;
     title.textContent = "";
 
