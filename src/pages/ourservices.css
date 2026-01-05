@@ -16,7 +16,7 @@
 .services-hero h1 {
   font-size: 50px;
   font-weight: 800;
-  color: #d80012;
+  color: #f51515;
   margin-bottom: 15px;
 }
 
@@ -63,7 +63,7 @@
 .service-content h2 {
   font-size: 22px;
   font-weight: 700;
-  color: #d80012;
+  color: #f51515;
   margin-bottom: 8px;
 }
 
@@ -76,14 +76,14 @@
 
 .service-link {
   display: inline-block;
-  color: #d80012;
+  color: #f51515;
   font-weight: 600;
   text-decoration: none;
   transition: 0.2s;
 }
 
 .service-link:hover {
-  color: #d80012;
+  color: #f51515;
 }
 
 /* RESPONSIVE STYLES */

@@ -109,7 +109,7 @@ function Home() {
 
       {/* SERVICES SECTION */}
       <section className="services-section">
-        <h2 className="section-title">Our Services</h2>
+        <h1 className="section-title">Our Services</h1>
         <div className="services-grid">
 
           <Link to="/construction" className="service-card">

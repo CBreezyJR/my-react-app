@@ -38,7 +38,7 @@
   font-size: 2.8rem;
   font-weight: 700;
   margin-bottom: 1rem;
-  color: #d32f2f;
+  color: #f51515;
 }
 
 .contact-hero-content p {
@@ -66,9 +66,9 @@
 
 .contact-section h2 {
   font-size: 1.5rem;
-  color: #d32f2f;
+  color: #f51515;
   margin-bottom: 0.8rem;
-  border-bottom: 2px solid #d32f2f;
+  border-bottom: 2px solid #f51515;
   display: inline-block;
   padding-bottom: 4px;
 }
@@ -92,7 +92,7 @@
 }
 
 .contact-section a:hover {
-  color: #d32f2f;
+  color: #f51515;
   text-decoration: underline;
 }
 
@@ -114,7 +114,7 @@
 }
 
 .contact-form button {
-  background-color: #d32f2f;
+  background-color: #f51515;
   color: #fff;
   font-weight: 700;
   padding: 0.7rem 1.5rem;
@@ -126,7 +126,7 @@
 }
 
 .contact-form button:hover {
-  background-color: #b71c1c;
+  background-color: #f51515;
 }
 
 /* --- MAP --- */

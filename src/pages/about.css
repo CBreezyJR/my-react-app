@@ -6,7 +6,7 @@
 }
 
 .about-title {
-  color: #d32f2f; /* red */
+  color: #f51515; /* red */
   text-align: center;
   font-size: 2.5rem;
   margin-bottom: 60px;
@@ -33,10 +33,10 @@
 }
 
 .about-text h2 {
-  color: #d32f2f;
+  color: #f51515;
   font-size: 1.8rem;
   margin-bottom: 20px;
-  border-bottom: 2px solid #d32f2f;
+  border-bottom: 2px solid #f51515;
   display: inline-block;
   padding-bottom: 5px;
 }
@@ -71,11 +71,11 @@
 }
 
 .core-values h2 {
-  color: #d32f2f;
+  color: #f51515;
   font-size: 1.8rem;
   margin-bottom: 20px;
   text-align: center;
-  border-bottom: 2px solid #d32f2f;
+  border-bottom: 2px solid #f51515;
   display: inline-block;
   padding-bottom: 5px;
 }

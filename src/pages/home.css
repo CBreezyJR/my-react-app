@@ -87,6 +87,7 @@
 }
 
 .p-card h3 {
+  color: #f51515;
   font-size: 24px;
   margin-bottom: 10px;
 }
@@ -125,9 +126,16 @@
   transition: 0.3s;
 }
 
+.section-title {
+  font-size: 35px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: #f51515;
+}
+
 .service-card h3 {
-  color: #bc2525; /* title color */
-  font-size: 30px;
+  color: #f51515; /* title color */
+  font-size: 25px;
   font-weight: 700;
 }
 
@@ -148,7 +156,7 @@
 .service-icon {
   font-size: 50px;
   margin-bottom: 15px;
-  color: #ff8a38;
+  color: #08085a;
   display: block;        /* allows margin auto to work */
   margin-left: auto;     
   margin-right: auto; 
@@ -161,7 +169,7 @@
 
 .projects-heading {
   text-align: center;
-  color: red;
+  color: #f51515;
   font-size: 2.5rem;
   font-weight: 700;
   margin-bottom: 1.5rem;
@@ -256,6 +264,7 @@
 }
 
 .partners-title {
+  color: #f51515;
   font-size: 35px;
   font-weight: 700;
   margin-bottom: 15px;
