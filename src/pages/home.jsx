@@ -73,8 +73,8 @@ function Home() {
         <div className="hero-overlay"></div>
 
         <div className="hero-content">
-          <h1>Building Tanzania’s Future.</h1>
-          <p>Engineering, Infrastructure, Logistics & Energy Solutions.</p>
+          <h1>BUILDING TANZANIA'S FUTURE.</h1>
+          <p>ENGINEERING, INFRASTRUCTURE, LOGISTICS & ENERGY SOLUTIONS.</p>
           <Link to="/what-we-do" className="hero-btn">Discover More</Link>
         </div>
       </section>
