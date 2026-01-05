@@ -27,6 +27,25 @@
   color: #1a1a1a;
 }
 
+/* Main Images */
+.mining-images {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 4rem;
+}
+
+.mining-images img {
+  width: 30%;
+  border-radius: 12px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.mining-images img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(0, 51, 153, 0.6);
+}
+
 /* SECTION TITLE */
 .construction-section h2 {
   font-size: 2rem;

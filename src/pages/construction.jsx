@@ -2,6 +2,10 @@ import React from "react";
 import "./construction.css";
 import projectsData from "../data/projectdata";
 
+import miningMain1 from "../assets/marine7.jpg";
+import miningMain2 from "../assets/posta9.jpg";
+import miningMain3 from "../assets/marine10.jpg";
+
 function Construction() {
   // Filter only construction category projects
   const constructionProjects = projectsData.filter(
@@ -18,6 +22,13 @@ function Construction() {
           delivering reliability, innovation, and engineering excellence.
         </p>
       </header>
+       
+       {/* Main Images */}
+      <div className="mining-images">
+        <img src={miningMain1} alt="Mining 1" />
+        <img src={miningMain2} alt="Mining 2" />
+        <img src={miningMain3} alt="Mining 3" />
+      </div>
 
       {/* PROJECT CARDS */}
       <section className="construction-section">
