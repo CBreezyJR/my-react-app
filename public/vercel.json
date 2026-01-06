@@ -1,0 +1,15 @@
+{
+    "redirects": [
+      {
+        "source": "/cpanel",
+        "destination": "https://nagggroup.co.tz:2083",
+        "permanent": false
+      },
+      {
+        "source": "/webmail",
+        "destination": "https://nagggroup.co.tz:2096",
+        "permanent": false
+      }
+    ]
+  }
+  
