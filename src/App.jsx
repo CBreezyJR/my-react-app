@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
+import { Navigate, useLocation } from "react-router-dom";
 
 // Pages
 import Home from "./pages/home";
@@ -48,9 +49,6 @@ import Navbar from "./components/navbar";
 import Footer from "./components/footer";
 
 function App() {
-  /* -------------------------------
-        TRANSLATION SYSTEM
-  --------------------------------- */
   const translations = {
     EN: {
       home: "Home",
@@ -61,12 +59,7 @@ function App() {
       aboutUs: "About Us",
       team: "Our Team",
       contact: "Contact Us",
-
-      heroTitle: "WELCOME TO NAGG GROUP",
-      heroSubtitle: "perfection is the goal",
-      discoverMore: "Discover More",
     },
-
     SW: {
       home: "Nyumbani",
       whatWeDo: "Tunachofanya",
@@ -76,15 +69,10 @@ function App() {
       aboutUs: "Kuhusu Sisi",
       team: "Timu Yetu",
       contact: "Wasiliana Nasi",
-
-      heroTitle: "KARIBU NAGG GROUP",
-      heroSubtitle: "ukamilifu ndio malengo",
-      discoverMore: "Jifunze Zaidi",
     },
   };
 
   const [lang, setLang] = useState(localStorage.getItem("site-lang") || "EN");
-
   const t = (key) => translations[lang][key] || key;
 
   useEffect(() => {
@@ -92,33 +80,30 @@ function App() {
   }, [lang]);
 
   return (
-    <Router>
-      <div className="app min-h-screen flex flex-col bg-gray-50 text-gray-900 font-raleway">
-        
-        {/* NAVBAR */}
-        <Navbar lang={lang} setLang={setLang} t={t} />
+    <div className="app min-h-screen flex flex-col bg-gray-50 text-gray-900 font-raleway">
 
-        {/* MAIN PAGE CONTENT */}
-        <main className="flex-1 w-full">
-          <Routes>
-            <Route path="/" element={<Home t={t} />} />
-            <Route path="/principles" element={<Principles t={t} />} />
-            <Route path="/what-we-do" element={<WhatWeDo t={t} />} />
-            <Route path="/our-projects" element={<OurProjects t={t} />} />
-            <Route path="/about-us" element={<AboutUs t={t} />} />
-            <Route path="/our-team" element={<OurTeam t={t} />} />
-            <Route path="/contact-us" element={<ContactUs t={t} />} />
-            <Route path="/sustainability" element={<Sustainability t={t} />} />
+      <Navbar lang={lang} setLang={setLang} t={t} />
 
-            <Route path="/construction" element={<Construction t={t} />} />
-            <Route path="/mining" element={<Mining t={t} />} />
-            <Route path="/oil" element={<Oil t={t} />} />
-            <Route path="/logistics" element={<Logistics t={t} />} />
-            <Route path="/realestate" element={<RealEstate t={t} />} />
-            <Route path="/rental" element={<Rental t={t} />} />
+      <main className="flex-1 w-full">
+        <Routes>
+          <Route path="/" element={<Home t={t} />} />
+          <Route path="/principles" element={<Principles t={t} />} />
+          <Route path="/what-we-do" element={<WhatWeDo t={t} />} />
+          <Route path="/our-projects" element={<OurProjects t={t} />} />
+          <Route path="/about-us" element={<AboutUs t={t} />} />
+          
+          <Route path="/our-team" element={<OurTeam t={t} />} />
+          <Route path="/contact-us" element={<ContactUs t={t} />} />
+          <Route path="/sustainability" element={<Sustainability t={t} />} />
 
-            {/* Featured Pages */}
-            <Route path="/posta" element={<Posta t={t} />} />
+          <Route path="/construction" element={<Construction t={t} />} />
+          <Route path="/mining" element={<Mining t={t} />} />
+          <Route path="/oil" element={<Oil t={t} />} />
+          <Route path="/logistics" element={<Logistics t={t} />} />
+          <Route path="/realestate" element={<RealEstate t={t} />} />
+          <Route path="/rental" element={<Rental t={t} />} />
+
+          <Route path="/posta" element={<Posta t={t} />} />
             <Route path="/sasenga" element={<Sasenga t={t} />} />
             <Route path="/tobacco" element={<Tobacco t={t} />} />
             <Route path="/tunduru" element={<Tunduru t={t} />} />
@@ -141,14 +126,12 @@ function App() {
             <Route path="/coaltransport" element={<CoalTransport t={t} />} />
             <Route path="/bahi" element={<Bahi t={t} />} />
             <Route path="/yongoma" element={<Yongoma t={t} />} />
-          </Routes>
-        </main>
 
-        {/* FOOTER */}
-        <Footer lang={lang} setLang={setLang} t={t} />
+        </Routes>
+      </main>
 
-      </div>
-    </Router>
+      <Footer lang={lang} setLang={setLang} t={t} />
+    </div>
   );
 }
 

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./footer.css";
 import { FaInstagram, FaWhatsapp, FaFacebook, FaLinkedin, FaXTwitter } from "react-icons/fa6";
 import logo from "../assets/7.logo.jpg";
@@ -8,7 +9,7 @@ const Footer = () => {
     <footer className="footer">
       {/* TOP SECTION */}
       <div className="footer-top">
-        
+
         {/* LOGO + ABOUT */}
         <div className="footer-brand">
           <img src={logo} alt="NAGG Logo" className="footer-logo" />
@@ -23,11 +24,11 @@ const Footer = () => {
         <div className="footer-links">
           <h3>Quick Links</h3>
           <ul>
-            <li><a href="/about">About Us</a></li>
-            <li><a href="/our-projects">Projects</a></li>
-            <li><a href="/what-we-do">Services</a></li>
-            <li><a href="/contact-us">Contact</a></li>
-          </ul>
+            <li><Link to="/about-us">About Us</Link></li>
+            <li><Link to="/contact-us">Contact</Link></li>
+            <li><Link to="/projects">Projects</Link></li>
+            <li><Link to="/services">Services</Link></li>
+            </ul>
         </div>
 
         {/* CONTACT INFO */}

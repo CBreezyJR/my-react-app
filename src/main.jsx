@@ -4,12 +4,14 @@ import App from "./App";
 import "flowbite/dist/flowbite.min.css";
 import "./styles/design-system.css";
 import "./index.css";
-
+import { BrowserRouter } from "react-router-dom";
 
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+  
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
+  
 );
 
