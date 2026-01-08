@@ -7,9 +7,12 @@ import rental2 from "../assets/rental02.jpg";
 import rental3 from "../assets/rental03.jpg";
 import rental4 from "../assets/rental04.png";
 import rental5 from "../assets/rental05.png";
+import rental6 from "../assets/nagg2.jpeg";
+import rental7 from "../assets/nagg3.jpeg";
+import rental8 from "../assets/nagg4.jpeg";
 
 function Rental() {
-  const images = [rentalMain, rental2, rental3,rental4,rental5];
+  const images = [rentalMain, rental2, rental3, rental4, rental5, rental6, rental7, rental8];
 
   const equipmentData = [
     { model: "ZOOMLION ZTC250V5-2R", description: "Mobile Crane", capacity: "25 Tons", quantity: "2 Pieces" },
@@ -69,9 +72,11 @@ function Rental() {
       {/* Header */}
       <div className="rental-header">
         <h1>Equipment Rental</h1>
+        <h2>Construction & Mining Equipment</h2>
         <p>
-          NAGG Group provides a wide range of high-quality machinery and equipment for hire —
-          supporting construction, mining, and logistics projects efficiently and reliably.
+          NAGG Group offers a reliable fleet of high-quality machinery for hire,
+          supporting construction and mining projects with efficiency, safety,
+          and performance.
         </p>
       </div>
 
