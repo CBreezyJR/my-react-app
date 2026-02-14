@@ -3,8 +3,8 @@
 =========================== */
 .nav-logo {
   position: fixed;
-  top: 20px;
-  left: 25px;
+  top: 10px;
+  left: 10px;
   width: 95px;
   height: auto;
   z-index: 6000;
