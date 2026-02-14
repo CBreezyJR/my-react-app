@@ -1,6 +1,7 @@
 import React from "react";
 import "./oil.css";
 import projectsData from "../data/projectdata";
+import { Link } from "react-router-dom";
 
 // Showcase images
 import eacop7 from "../assets/eacop7.jpg";
@@ -41,18 +42,11 @@ function Oil() {
 
         <div className="projects-grid">
           {oilProjects.map((project) => (
-            <div className="project-card" key={project.id}>
+            <Link to={project.link} key={project.id} className="project-card">
               <h3>{project.title}</h3>
-              <div className="project-details">
-                {project.client && <p><strong>Client:</strong> {project.client}</p>}
-                {project.location && <p><strong>Location:</strong> {project.location}</p>}
-                {project.value && <p><strong>Value:</strong> {project.value}</p>}
-                {project.year && <p><strong>Year:</strong> {project.year}</p>}
-                <p className={`status ${project.status.toLowerCase().replace(" ", "-")}`}>
-                  <strong>Status:</strong> {project.status}
-                </p>
-              </div>
-            </div>
+              <p><strong>Location:</strong> {project.location}</p>
+              <p><strong>Status:</strong> {project.status}</p>
+            </Link>
           ))}
         </div>
       </section>

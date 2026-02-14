@@ -1,5 +1,6 @@
 import React from "react";
 import "./mining.css";
+import { Link } from "react-router-dom";
 
 // Images
 import miningMain1 from "../assets/dom7.jpg";
@@ -36,36 +37,13 @@ function Mining() {
       {/* Featured Projects */}
       <div className="projects-involved">
         <h2>Featured Mining Projects</h2>
-        <div className="project-list">
+        <div className="projects-grid">
           {miningProjects.map((project) => (
-            <div className="project-card" key={project.id}>
-              <div className="project-info">
-                <h3>{project.title}</h3>
-                {project.location && (
-                  <p>
-                    <strong>Location:</strong> {project.location}
-                  </p>
-                )}
-                {project.client && (
-                  <p>
-                    <strong>Client:</strong> {project.client}
-                  </p>
-                )}
-                {project.value && (
-                  <p>
-                    <strong>Project Value:</strong> {project.value}
-                  </p>
-                )}
-                {project.materials && (
-                  <p>
-                    <strong>Materials:</strong> {project.materials}
-                  </p>
-                )}
-                <p>
-                  <strong>Status:</strong> {project.status}
-                </p>
-              </div>
-            </div>
+            <Link to={project.link} key={project.id} className="project-card">
+              <h3>{project.title}</h3>
+              <p><strong>Location:</strong> {project.location}</p>
+              <p><strong>Status:</strong> {project.status}</p>
+            </Link>
           ))}
         </div>
       </div>

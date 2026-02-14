@@ -8,7 +8,7 @@ import sgrEarthworks from "../assets/sgrearthworks.png";
 import marineTerminal from "../assets/marine.png";
 import tobaccoFactory from "../assets/tobacco10.jpg";
 import nickelOrePmm from "../assets/dom7.jpg";
-import nickelOreMast from "../assets/nickelore.jpg";
+import nickelOreMast from "../assets/dom1.jpg";
 import nickelOreSassya from "../assets/sassya1.jpg";
 import ironOre from "../assets/ironore.jpg";
 import bahiQuarry from "../assets/bahiquarry.jpg";
