@@ -35,7 +35,7 @@ const Footer = () => {
         <div className="footer-contact">
           <h3>Contact</h3>
           <p>Dar es Salaam, Tanzania</p>
-          <p>Email: info@nagg.co.tz</p>
+          <p>Email: info@nagggroup.co.tz</p>
           <a href="https://wa.me/255745999995">Phone: +255 745 999 995</a>
         </div>
 
