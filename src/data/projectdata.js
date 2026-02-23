@@ -2,7 +2,7 @@
 
 import posta10 from "../assets/posta10.jpg";
 import tunduruWater from "../assets/tunduru.png";
-import yongomaDam from "../assets/yongoma.png";
+import yongomaDam from "../assets/yongoma15.jpeg";
 import sasengaIrrigation from "../assets/sasenga.png";
 import sgrEarthworks from "../assets/sgrearthworks.png";
 import marineTerminal from "../assets/marine.png";

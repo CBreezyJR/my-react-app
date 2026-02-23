@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./footer.css";
 import { FaInstagram, FaWhatsapp, FaFacebook, FaLinkedin, FaXTwitter } from "react-icons/fa6";
-import logo from "../assets/7.logo.jpg";
+import logo from "../assets/nagglogo.jpg";
 
 const Footer = () => {
   return (
