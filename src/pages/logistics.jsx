@@ -3,7 +3,7 @@ import "./logistics.css";
 import { Link } from "react-router-dom";
 
 // Images
-import logisticsMain1 from "../assets/cargotransportation.jpg";
+import logisticsMain1 from "../assets/cargo.jpeg";
 import logisticsMain2 from "../assets/logistics02.jpg";
 import logisticsMain3 from "../assets/naggtransportation.png";
 

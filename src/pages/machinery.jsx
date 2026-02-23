@@ -1,5 +1,5 @@
 import React from "react";
-import machineryMobilization from "../assets/machinerymobilization.png";
+import machineryMobilization from "../assets/logistics02.jpg";
 import "./machinery.css";
 
 function Machinery() {

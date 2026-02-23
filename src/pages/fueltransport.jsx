@@ -1,5 +1,5 @@
 import React from "react";
-import fuelTransport from "../assets/fueltransportation.png";
+import fuelTransport from "../assets/fuelcargo.jpeg";
 import "./fueltransport.css";
 
 function FuelTransport() {

@@ -1,5 +1,5 @@
 import React from "react";
-import factoryEquipment from "../assets/factoryequipment.png";
+import factoryEquipment from "../assets/logistics02.jpg";
 import "./factory.css";
 
 function Factory() {
